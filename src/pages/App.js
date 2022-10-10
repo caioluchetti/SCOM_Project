@@ -5,13 +5,16 @@ import './styles.css';
 
 function App() {
 
-  
-  return (
-   <div className='container'>
-    Oi!
-   </div>
 
-  );
+    return (
+        <>
+            <div className='container'>
+                Oi!
+            </div>
+        </>
+
+
+    );
 }
 
 export default App;
