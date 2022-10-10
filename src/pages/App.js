@@ -7,10 +7,15 @@ function App() {
 
   
   return (
+<<<<<<< HEAD
    <div className='container'>
     Oi!
    </div>
 
+=======
+   <>
+   </>
+>>>>>>> 7ce98e5071562e5fa9fac575697b8a6ebc36bd56
   );
 }
 
