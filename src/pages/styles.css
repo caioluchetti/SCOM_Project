@@ -12,7 +12,7 @@
     height: 2vh;
     border-radius: 100%;
     z-index:2;
-    left: 77.4vw;
+    left: 77.5vw;
     top: 39vh;
     transition: all 0.5s ease;
 }
@@ -31,6 +31,254 @@
 }
 
 .Windhelm:hover .Windhelm-content{
+    display:block;
+   
+}
+.Whiterun{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 53.7vw;
+    top: 50vh;
+    transition: all 0.5s ease;
+}
+
+.Whiterun:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Whiterun-content{
+    display:none;
+}
+
+.Whiterun:hover .Whiterun-content{
+    display:block;
+   
+}
+.Downstar{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 55.58vw;
+    top: 19.7vh;
+    transition: all 0.5s ease;
+}
+
+.Downstar:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Downstar-content{
+    display:none;
+}
+
+.Downstar:hover .Downstar-content{
+    display:block;
+   
+}
+.Solitude{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 33.25vw;
+    top: 19vh;
+    transition: all 0.5s ease;
+}
+
+.Solitude:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Solitude-content{
+    display:none;
+}
+
+.Solitude:hover .Solitude-content{
+    display:block;
+   
+}
+.Winterhold{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 72.46vw;
+    top: 20.8vh;
+    transition: all 0.5s ease;
+}
+
+.Winterhold:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Winterhold-content{
+    display:none;
+}
+
+.Winterhold:hover .Winterhold-content{
+    display:block;
+   
+}
+.Morthal{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 40.12vw;
+    top: 31.6vh;
+    transition: all 0.5s ease;
+}
+
+.Morthal:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Morthal-content{
+    display:none;
+}
+
+.Morthal:hover .Morthal-content{
+    display:block;
+   
+}
+.Riften{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 87.8vw;
+    top: 78vh;
+    transition: all 0.5s ease;
+}
+
+.Riften:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Riften-content{
+    display:none;
+}
+
+.Riften:hover .Riften-content{
+    display:block;
+   
+}
+.Markarth{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 10vw;
+    top: 49vh;
+    transition: all 0.5s ease;
+}
+
+.Markarth:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Markarth-content{
+    display:none;
+}
+
+.Markarth:hover .Markarth-content{
+    display:block;
+   
+}
+.Falkreath{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 41.7vw;
+    top: 76vh;
+    transition: all 0.5s ease;
+}
+
+.Falkreath:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Falkreath-content{
+    display:none;
+}
+
+.Falkreath:hover .Falkreath-content{
     display:block;
    
 }
