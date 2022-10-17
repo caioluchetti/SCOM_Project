@@ -6,7 +6,7 @@ export default function Bestiario() {
 
     return (
         <div className="body">
-            
+            Aoba
         </div>
     )
 }
