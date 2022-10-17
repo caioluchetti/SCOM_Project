@@ -1,19 +1,31 @@
+@font-face {
+    font-family: 'Skyrim';
+    src: URL('../fonts/Planewalker.otf') format('opentype');
+  }
+
+
 *{
     margin: 0;
     padding: 0;
 }
 
+
+
 .Windhelm{
 
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(83, 9, 220, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
     z-index:2;
     left: 77.5vw;
     top: 39vh;
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     transition: all 0.5s ease;
 }
 
@@ -23,7 +35,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Windhelm-content{
@@ -35,10 +49,13 @@
    
 }
 .Whiterun{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(221, 255, 0, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
@@ -54,7 +71,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Whiterun-content{
@@ -65,11 +84,14 @@
     display:block;
    
 }
-.Downstar{
-
+.Dawnstar{
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(255, 255, 255, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
@@ -79,28 +101,33 @@
     transition: all 0.5s ease;
 }
 
-.Downstar:hover{
+.Dawnstar:hover{
 
     width: 13vw;
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
-.Downstar-content{
+.Dawnstar-content{
     display:none;
 }
 
-.Downstar:hover .Downstar-content{
+.Dawnstar:hover .Dawnstar-content{
     display:block;
    
 }
 .Solitude{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(255, 0, 0, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
@@ -116,7 +143,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Solitude-content{
@@ -128,10 +157,13 @@
    
 }
 .Winterhold{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(0, 255, 217, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
@@ -147,7 +179,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Winterhold-content{
@@ -159,10 +193,13 @@
    
 }
 .Morthal{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(52, 85, 37, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
@@ -178,7 +215,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Morthal-content{
@@ -190,10 +229,13 @@
    
 }
 .Riften{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
-    background-color: rgba(81, 255, 0, 0.658);
+    background-color: rgba(239, 13, 205, 0.658);
     width: 1.3vw;
     height: 2vh;
     border-radius: 100%;
@@ -209,7 +251,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Riften-content{
@@ -221,7 +265,10 @@
    
 }
 .Markarth{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
     background-color: rgba(81, 255, 0, 0.658);
@@ -240,7 +287,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Markarth-content{
@@ -252,7 +301,10 @@
    
 }
 .Falkreath{
-
+    font-family: Skyrim;
+    font-size: 0vw;
+    color: white;
+    text-align: center;
     position: absolute;
     border: 1px;
     background-color: rgba(81, 255, 0, 0.658);
@@ -271,7 +323,9 @@
     height: 10vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
-
+    font-family: Skyrim;
+    font-size: 1.4vw;
+    color: white;
 }
 
 .Falkreath-content{

@@ -9,8 +9,8 @@ function App() {
     const Windhelmnav = () => {
         navigate('/Windhelm');
       };
-      const Downstarnav = () => {
-        navigate('/Downstar');
+      const Dawnstarnav = () => {
+        navigate('/Dawnstar');
       };
       const Falkreathnav = () => {
         navigate('/Falkreath');
@@ -39,47 +39,47 @@ function App() {
             <div className='mapa'>
             <div className='Windhelm'>
                 <div className='Windhelm-content' onClick={Windhelmnav}>
-                    Clique para acessar a Lore dessa Cidade
+                    Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Whiterun'>
                 <div className='Whiterun-content' onClick={Whiterunnav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Solitude'>
                 <div className='Solitude-content' onClick={Solitudenav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Morthal'>
                 <div className='Morthal-content' onClick={Morthalnav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
-            <div className='Downstar'>
-                <div className='Downstar-content' onClick={Downstarnav}>
-                    Clique para acessar a Lore dessa Cidade
+            <div className='Dawnstar'>
+                <div className='Dawnstar-content' onClick={Dawnstarnav}>
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Winterhold'>
                 <div className='Winterhold-content' onClick={Winterholdnav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Riften'>
                 <div className='Riften-content' onClick={Riftennav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Markarth'>
                 <div className='Markarth-content' onClick={Markarthnav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
             <div className='Falkreath'>
                 <div className='Falkreath-content' onClick={Falkreathnav}>
-                    Clique para acessar a Lore dessa Cidade
+                Clique para acessar a lore dessa Cidade
                 </div>
             </div>
 
@@ -88,7 +88,6 @@ function App() {
 
 
             </div>
-           
         </>
 
 
