@@ -11,6 +11,7 @@ import Riften from './pages/cidades/Riften'
 import Solitude from './pages/cidades/Solitude'
 import Whiterun from './pages/cidades/Whiterun'
 import Winterhold from './pages/cidades/Winterhold'
+import Bestiario from './pages/Bestiario'
 
 
 function Rotas(){
@@ -27,6 +28,7 @@ function Rotas(){
                 <Route path="/Solitude" element={<Solitude/>}/>
                 <Route path="/Whiterun" element={<Whiterun/>}/>
                 <Route path="/Winterhold" element={<Winterhold/>}/>
+                <Route path="/Bestiario" element={<Bestiario/>}/>
 
             </Routes>
 
