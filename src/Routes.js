@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
 
 import Main from './pages/App'
 import Windhelm from './pages/cidades/Windhelm'
-import Downstar from './pages/cidades/Downstar'
+import Dawnstar from './pages/cidades/Dawnstar'
 import Falkreath from './pages/cidades/Falkreath'
 import Markarth from './pages/cidades/Markarth'
 import Morthal from './pages/cidades/Morthal'
@@ -19,7 +19,7 @@ function Rotas(){
             <Routes>
                 <Route path="/" element={<Main/>} />
                 <Route path="/Windhelm" element={<Windhelm/>}/>
-                <Route path="/Downstar" element={<Downstar/>}/>
+                <Route path="/Dawnstar" element={<Dawnstar/>}/>
                 <Route path="/Falkreath" element={<Falkreath/>}/>
                 <Route path="/Markarth" element={<Markarth/>}/>
                 <Route path="/Morthal" element={<Morthal/>}/>
