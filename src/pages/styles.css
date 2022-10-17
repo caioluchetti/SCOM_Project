@@ -383,3 +383,27 @@
     overflow-x: hidden;
     overflow-y: scroll;
   }
+
+.externo{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulo{
+    width: 200 px;
+    font-size: 5vw;
+    font-family: 'Skyrim';
+    margin-right: 25%;
+    margin-left: 25%;
+}
+.titulo#whiterun{
+    color: rgb(148, 148, 8);
+}
+
+.escudo{
+    flex-direction: row;
+    align-self: baseline;
+}
