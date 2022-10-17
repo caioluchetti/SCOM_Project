@@ -1,8 +1,42 @@
-.container{
+*{
+    margin: 0;
+    padding: 0;
+}
 
+.Windhelm{
+
+    position: absolute;
+    border: 1px;
+    background-color: rgba(81, 255, 0, 0.658);
+    width: 1.3vw;
+    height: 2vh;
+    border-radius: 100%;
+    z-index:2;
+    left: 77.4vw;
+    top: 39vh;
+    transition: all 0.5s ease;
+}
+
+.Windhelm:hover{
+
+    width: 13vw;
+    height: 10vh;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.473);
+
+}
+
+.Windhelm-content{
+    display:none;
+}
+
+.Windhelm:hover .Windhelm-content{
+    display:block;
+   
+}
+
+.mapa{
+    position: absolute;
     width: 100vw;
-    height: 100px;
-    background-color: green;
-
-
+    height: 100vh;
 }
