@@ -89,7 +89,6 @@ function App() {
             <div className='Undermap'>
                 <div className='Title'>O que é Skyrim</div>
             </div>
-           
         </>
 
 
