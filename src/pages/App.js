@@ -9,6 +9,30 @@ function App() {
     const Windhelmnav = () => {
         navigate('/Windhelm');
       };
+      const Downstarnav = () => {
+        navigate('/Downstar');
+      };
+      const Falkreathnav = () => {
+        navigate('/Falkreath');
+      };
+      const Markarthnav = () => {
+        navigate('/Markarth');
+      };
+      const Morthalnav = () => {
+        navigate('/Morthal');
+      };
+      const Riftennav = () => {
+        navigate('/Riften');
+      };
+      const Solitudenav = () => {
+        navigate('/Solitude');
+      };
+      const Whiterunnav = () => {
+        navigate('/Whiterun');
+      };
+      const Winterholdnav = () => {
+        navigate('/Winterhold');
+      };
 
     return (
         <>
@@ -19,42 +43,42 @@ function App() {
                 </div>
             </div>
             <div className='Whiterun'>
-                <div className='Whiterun-content' onClick={Windhelmnav}>
+                <div className='Whiterun-content' onClick={Whiterunnav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Solitude'>
-                <div className='Solitude-content' onClick={Windhelmnav}>
+                <div className='Solitude-content' onClick={Solitudenav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Morthal'>
-                <div className='Morthal-content' onClick={Windhelmnav}>
+                <div className='Morthal-content' onClick={Morthalnav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Downstar'>
-                <div className='Downstar-content' onClick={Windhelmnav}>
+                <div className='Downstar-content' onClick={Downstarnav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Winterhold'>
-                <div className='Winterhold-content' onClick={Windhelmnav}>
+                <div className='Winterhold-content' onClick={Winterholdnav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Riften'>
-                <div className='Riften-content' onClick={Windhelmnav}>
+                <div className='Riften-content' onClick={Riftennav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Markarth'>
-                <div className='Markarth-content' onClick={Windhelmnav}>
+                <div className='Markarth-content' onClick={Markarthnav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
             <div className='Falkreath'>
-                <div className='Falkreath-content' onClick={Windhelmnav}>
+                <div className='Falkreath-content' onClick={Falkreathnav}>
                     Clique para acessar a Lore dessa Cidade
                 </div>
             </div>
