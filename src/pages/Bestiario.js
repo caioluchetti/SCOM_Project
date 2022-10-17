@@ -1,8 +1,10 @@
 import React from "react";
 import './styles.css'
-import background from '../images/background.webp'
+import json from '../databaseBestiario.json'
 
 export default function Bestiario() {
+
+console.log('json :>> ', json);
 
     return (
         <div className="body">
