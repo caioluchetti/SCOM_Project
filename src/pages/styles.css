@@ -338,7 +338,15 @@
 }
 
 .mapa{
-    position: absolute;
+    
     width: 100vw;
     height: 100vh;
+}
+
+.Title{
+
+    font-family: 'Skyrim';
+    font-size: large;
+    text-align: center ;
+
 }
