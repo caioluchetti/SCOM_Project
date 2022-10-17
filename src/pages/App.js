@@ -36,9 +36,8 @@ function App() {
 
     return (
         <>
-        <div className='body'>
-
-            <div className='mapa'>
+        <div className='MainContainer'>
+        <div className='mapa'>
             <div className='Windhelm'>
                 <div className='Windhelm-content' onClick={Windhelmnav}>
                     Clique para acessar a lore dessa Cidade
@@ -88,12 +87,12 @@ function App() {
             <img  alt='a' width={'100%'} height={'100%'} src={map}/>
             </div>
 
+
             <div className='Undermap'>
                 <div className='Title'>O que é Skyrim</div>
             </div>
-
-            </div>
-
+        </div>
+           
         </>
 
 
