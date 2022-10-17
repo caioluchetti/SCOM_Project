@@ -36,6 +36,8 @@ function App() {
 
     return (
         <>
+        <div className='body'>
+
             <div className='mapa'>
             <div className='Windhelm'>
                 <div className='Windhelm-content' onClick={Windhelmnav}>
@@ -89,6 +91,9 @@ function App() {
             <div className='Undermap'>
                 <div className='Title'>O que é Skyrim</div>
             </div>
+
+            </div>
+
         </>
 
 
