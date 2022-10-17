@@ -11,7 +11,7 @@ function Whiterun() {
     return (
         <>
            <div className='Teste'>
-            Oie
+            Oie teste
            </div>
         </>
 
