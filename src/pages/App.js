@@ -19,6 +19,7 @@ function App() {
 
     document.getElementById('capa').style.opacity = 0;
     document.getElementById('capa').style.zIndex = -2;
+    document.getElementById('capa').style.backgroundColor = 'white'
     setTexto("Hey, you, finally awake!")
   }
 
