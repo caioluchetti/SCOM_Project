@@ -32,7 +32,7 @@
 .Windhelm:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -68,7 +68,7 @@
 .Whiterun:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -104,7 +104,7 @@
 .Dawnstar:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -140,7 +140,7 @@
 .Solitude:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -176,7 +176,7 @@
 .Winterhold:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -212,7 +212,7 @@
 .Morthal:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -248,7 +248,7 @@
 .Riften:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -284,7 +284,7 @@
 .Markarth:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -320,7 +320,7 @@
 .Falkreath:hover{
 
     width: 13vw;
-    height: 10vh;
+    height: 5vh;
     border-radius: 5%;
     background-color: rgba(128, 128, 128, 0.473);
     font-family: Skyrim;
@@ -338,7 +338,7 @@
 }
 
 .mapa{
-    
+    box-shadow: inset 10px 10px 10px black;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -362,8 +362,8 @@
 }
 
 .Undermap{
-
-    padding-top: 10px;
+    box-shadow: inset 0px 10px 20px black;
+    padding-top: 10%;
     background-image: url("../images/background.webp");
     height: 100%;
     width: 100vw;
@@ -372,11 +372,24 @@
     background-color: white;
     z-index: 1;
 }
-.Content {
-  
+.Capa {
+  position: absolute;
+  background-color: black;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  opacity: 100%;
+  transition: all 3s 0.5s ease-in;
   }
 
 .MainContainer {
+    
     perspective: 1px;
     transform-style: preserve-3d;
     height: 100vh;
@@ -407,3 +420,31 @@
     flex-direction: row;
     align-self: baseline;
 }
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+  }
+  .glow2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+    }
+  }
