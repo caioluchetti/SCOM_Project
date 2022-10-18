@@ -412,8 +412,25 @@
     margin-right: 25%;
     margin-left: 25%;
 }
+
 .titulo#whiterun{
     color: rgb(148, 148, 8);
+}
+
+.stop{
+    position: absolute;
+    width: 10vw;
+    background-color: rgb(133, 133, 133);
+    font-family: 'Skyrim';
+    border-radius: 10%;
+    text-align: center;
+    top: 0;
+    transition: all 1s ease;
+}
+.stop:hover{
+    width: 11vw;
+    top: 1vh;
+    background-color: #ffffff;
 }
 
 .escudo{
