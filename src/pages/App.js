@@ -1,13 +1,18 @@
-import React, { useState, useContext, useEffect,useRef  } from 'react';
+import React, { useState, useContext, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
 import map from '../images/map.jpg'
 import sound from '../audio/soundtrack.mp3'
 import sound2 from '../audio/finallyawake.mp3'
+import sound3 from '../audio/in2.mp3'
+import sound4 from '../audio/out2.mp3'
 
 function App() {
   const audio = new Audio(sound);
   const audio2 = new Audio(sound2);
+  const audio3 = new Audio(sound3);
+  const audio4 = new Audio(sound4);
+
   const [texto, setTexto] = useState('Aperte na tela para acordar!');
   const [textobot, setTextobot] = useState('')
   const [condicao, setCondicao] = useState(0)
@@ -15,6 +20,9 @@ function App() {
 
   const myRef = useRef();
   const myRef2 = useRef();
+  const myRef3 = useRef();
+  const myRef4 = useRef();
+
   function sumir() {
 
     document.getElementById('capa').style.opacity = 0;
@@ -23,24 +31,30 @@ function App() {
     setTexto("Hey, you, finally awake!")
   }
 
-  function tocar(){
+  function tocar() {
 
     myRef.current.play();
     myRef2.current.play();
     setTextobot("Parar Música")
     setCondicao(1);
   }
-  function pararcontinuar(){
-    if(condicao == 1){
+  function Playin(){
+    myRef3.current.play();
+  }
+  function Playout(){
+    myRef4.current.play();
+  }
+  function pararcontinuar() {
+    if (condicao == 1) {
       myRef.current.pause();
       setTextobot("Voltar Música")
       setCondicao(0)
-    }else{
+    } else {
       myRef.current.play();
       setTextobot("Pausar Música")
       setCondicao(1)
     }
-    
+
 
   }
 
@@ -80,13 +94,21 @@ function App() {
 
   return (
     <>
-    <audio
+      <audio
         ref={myRef}
         src={sound}
       />
-    <audio
+      <audio
         ref={myRef2}
         src={sound2}
+      />
+      <audio
+        ref={myRef3}
+        src={sound3}
+      />
+      <audio
+        ref={myRef4}
+        src={sound4}
       />
       <div className='Capa' id='capa' onClick={dois}>
         <div className='glow'>
@@ -99,48 +121,49 @@ function App() {
           {textobot}
         </div>
         <div className='mapa'>
+
           <div className='Windhelm'>
-            <div className='Windhelm-content' onClick={Windhelmnav}>
+            <div className='Windhelm-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Windhelmnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Whiterun'>
-            <div className='Whiterun-content' onClick={Whiterunnav}>
+            <div className='Whiterun-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Whiterunnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Solitude'>
-            <div className='Solitude-content' onClick={Solitudenav}>
+            <div className='Solitude-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Solitudenav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Morthal'>
-            <div className='Morthal-content' onClick={Morthalnav}>
+            <div className='Morthal-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Morthalnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Dawnstar'>
-            <div className='Dawnstar-content' onClick={Dawnstarnav}>
+            <div className='Dawnstar-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Dawnstarnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Winterhold'>
-            <div className='Winterhold-content' onClick={Winterholdnav}>
+            <div className='Winterhold-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Winterholdnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Riften'>
-            <div className='Riften-content' onClick={Riftennav}>
+            <div className='Riften-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Riftennav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Markarth'>
-            <div className='Markarth-content' onClick={Markarthnav}>
+            <div className='Markarth-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Markarthnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
           <div className='Falkreath'>
-            <div className='Falkreath-content' onClick={Falkreathnav}>
+            <div className='Falkreath-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Falkreathnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
