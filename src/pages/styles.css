@@ -348,4 +348,11 @@
     height: 100vh;
     width: 100vw;
     z-index: -1;
+    position: relative;
+}
+
+.ImgOnPage{
+    position: absolute;
+    right: 1%;
+    margin-top: 10%;
 }
