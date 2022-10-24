@@ -4,11 +4,11 @@ import json from '../databaseBestiario.json'
 
 export default function Bestiario() {
 
-console.log('json :>> ', json);
+console.log('json :>> ', json.titulo);
 
     return (
         <div className="body">
-            Aoba
+            <img src={json.foto}/>
         </div>
     )
 }
