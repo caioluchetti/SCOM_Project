@@ -38,10 +38,10 @@ function App() {
     setTextobot("Parar Música")
     setCondicao(1);
   }
-  function Playin(){
+  function Playin() {
     myRef3.current.play();
   }
-  function Playout(){
+  function Playout() {
     myRef4.current.play();
   }
   function pararcontinuar() {
@@ -127,11 +127,15 @@ function App() {
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Whiterun'>
-            <div className='Whiterun-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Whiterunnav}>
-              Clique para acessar a lore dessa Cidade
+          <div className='pai'>
+            <div className='logoteste' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Whiterunnav}>
+            <div className='Whiterun-content' >
+                Clique para acessar a lore dessa Cidade
+              </div>
             </div>
+            
           </div>
+
           <div className='Solitude'>
             <div className='Solitude-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Solitudenav}>
               Clique para acessar a lore dessa Cidade
@@ -168,7 +172,7 @@ function App() {
             </div>
           </div>
 
-          <img alt='a' width={'100%'} height={'100%'} src={map} />
+          <img alt='a' style={{zIndex:-20}}width={'100%'} height={'100%'} src={map} />
         </div>
 
 
