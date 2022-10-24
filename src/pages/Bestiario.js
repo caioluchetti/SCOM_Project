@@ -10,7 +10,7 @@ console.log('json :>> ', json.titulo);
 
     return (
         <div className="body">
-            <Moldura imagem={json.foto} />
+            <Moldura imagem={json.foto}/>
         </div>
     )
 }
