@@ -5,11 +5,24 @@ import BarraPesquisa from "../components/BarraPesquisa";
 
 export default function Bestiario() {
 
-console.log('json :>> ', json);
+    console.log('json :>> ', json.titulo);
+
+    const imagens = [
+            {
+                img: "imagem 1"
+            },
+            {
+                img: "imagem 2"
+            },
+            {
+                img: "imagem 3"
+            }
+        ]
+
 
     return (
         <div className="body">
-            <BarraPesquisa/>
+            <BarraPesquisa imagens={imagens} />
         </div>
     )
 }
