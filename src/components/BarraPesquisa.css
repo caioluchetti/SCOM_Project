@@ -30,25 +30,41 @@
 
 .trianguloD {
     position: absolute;
-    top: 2px;
-    left: 266px;
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid transparent;
-    border-left: 13px solid white;
+    top: 4px;
+    left: 264px;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+    border-left: 13px solid black;
     margin-top: 0px;
+}
+
+.bordaTrianguloD {
+    position: absolute;
+    top: 2px;
+    left: 264px;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 18px solid white;
+    margin-top: -2px;
+    z-index: -1;
 }
 
 .containerTrianguloD {
     position: absolute;
+    top: 0px;
+    left: 265;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-left: 13px solid white;
 }
 
 .trianguloE {
     position: absolute;
     top: 2px;
-    left: 266px;
+    left: 8.5px;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
-    border-left: 13px solid white;
+    border-right: 13px solid black;
     margin-top: 0px;
 }
 
@@ -63,4 +79,3 @@
     height: 40px;
 
 }
-
