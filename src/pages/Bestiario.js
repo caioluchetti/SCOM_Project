@@ -3,8 +3,8 @@ import './styles.css'
 import json from '../databaseBestiario.json'
 import Botao from "../components/Botao";
 import Moldura from "../components/Moldura";
-import MusicaCombate from "../components/MusicaCombate";
-import combate from '../audio/soundtrack.mp3';
+// import MusicaCombate from "../components/MusicaCombate";
+// import combate from '../audio/soundtrack.mp3';
 
 export default function Bestiario() {
 
@@ -36,11 +36,6 @@ console.log('json :>> ', json.titulo);
                 <p>
                 {json.combate}
                 </p>
-            </div>
-            <div>
-                <audio>
-                    <MusicaCombate/>
-                </audio>
             </div>
         </div>
     )
