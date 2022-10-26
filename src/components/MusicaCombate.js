@@ -1,5 +1,5 @@
 import React from "react";
-import combate from "../audio/"
+import combate from '../audio/soundtrack.mp3';
 
 export default function MusicaCombate(props){
 
