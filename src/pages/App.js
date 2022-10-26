@@ -16,6 +16,7 @@ function App() {
     setStart(localStorage.getItem("condicao"))
     if(start == "sim"){
       setTexto("Loading...")
+      tocar();
       document.getElementById('capa').style.opacity = 0;
       document.getElementById('capa').style.zIndex = -2;
       document.getElementById('capa').style.backgroundColor = 'white'
@@ -217,7 +218,8 @@ async function dois() {
 
         <div className='Undermap'>
           <div className='Title'>O que é Skyrim</div>
-        </div>
+          <div className='texto'></div>
+          </div>
       </div>
 
 
