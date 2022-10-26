@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
+import YouTube from 'react-youtube';
 import { useNavigate } from 'react-router-dom';
 import './styles.css';
 import map from '../images/map.jpg'
@@ -16,8 +17,6 @@ function App() {
     setStart(localStorage.getItem("condicao"))
     if(start == "sim"){
       setTexto("Loading...")
-      tocar();
-      myRef.current.play();
       document.getElementById('capa').style.opacity = 0;
       document.getElementById('capa').style.zIndex = -2;
       document.getElementById('capa').style.backgroundColor = 'white'
@@ -33,7 +32,7 @@ function App() {
   const audio4 = new Audio(sound4);
 
   const [texto, setTexto] = useState('Loading...');
-  const [textobot, setTextobot] = useState('')
+  const [textobot, setTextobot] = useState('Tocar Música')
   const [condicao, setCondicao] = useState(0)
 
 
@@ -112,7 +111,9 @@ async function dois() {
   const Winterholdnav = () => {
     navigate('/Winterhold');
   };
-
+  const Beastiarynav = () => {
+    navigate('/Bestiario');
+  }
   return (
     <>
       <audio
@@ -218,8 +219,11 @@ async function dois() {
 
 
         <div className='Undermap'>
-          <div className='Title'>O que é Skyrim</div>
-          <div className='texto'></div>
+          <div className='Title'>Conheça o mundo de Skyrim!</div>
+          <div className='texto'>
+          <YouTube videoId="JSRtYpNRoN0"/>
+          </div>
+          <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
           </div>
       </div>
 
