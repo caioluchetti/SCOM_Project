@@ -8,12 +8,29 @@ import sound3 from '../audio/in2.mp3'
 import sound4 from '../audio/out2.mp3'
 
 function App() {
+
+  const [start, setStart] = useState('');
+
+  useEffect(() => {
+   
+    setStart(localStorage.getItem("condicao"))
+    if(start == "sim"){
+      setTexto("Loading...")
+      document.getElementById('capa').style.opacity = 0;
+      document.getElementById('capa').style.zIndex = -2;
+      document.getElementById('capa').style.backgroundColor = 'white'
+    }else{
+      setTexto("Aperte na tela para acordar!")
+    }
+
+  },[start]);
+
   const audio = new Audio(sound);
   const audio2 = new Audio(sound2);
   const audio3 = new Audio(sound3);
   const audio4 = new Audio(sound4);
 
-  const [texto, setTexto] = useState('Aperte na tela para acordar!');
+  const [texto, setTexto] = useState('Loading...');
   const [textobot, setTextobot] = useState('')
   const [condicao, setCondicao] = useState(0)
 
@@ -58,10 +75,12 @@ function App() {
 
   }
 
-  function dois() {
-    sumir();
-    tocar();
-  }
+async function dois() {
+
+    await sumir();
+    await tocar();
+    localStorage.setItem("condicao","sim")
+}
 
   const navigate = useNavigate();
   const Windhelmnav = () => {
@@ -122,56 +141,76 @@ function App() {
         </div>
         <div className='mapa'>
 
-          <div className='Windhelm'>
+          <div className='paiWindhelm'>
+          <div className='logoWindhelm' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Windhelmnav}>
             <div className='Windhelm-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Windhelmnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='pai'>
-            <div className='logoteste' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Whiterunnav}>
+          </div>
+          <div className='paiWhiterun'>
+            <div className='logoWhiterun' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Whiterunnav}>
             <div className='Whiterun-content' >
                 Clique para acessar a lore dessa Cidade
               </div>
             </div>
             
           </div>
+          <div className='paiSolitude'>
+          <div className='logoSolitude' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Solitudenav}>
 
-          <div className='Solitude'>
             <div className='Solitude-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Solitudenav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Morthal'>
+          </div>
+          <div className='paiMorthal'>
+          <div className='logoMorthal' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Morthalnav}>
+
             <div className='Morthal-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Morthalnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Dawnstar'>
+          </div>
+          <div className='paiDawnstar'>
+          <div className='logoDawnstar' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Dawnstarnav}>
+
             <div className='Dawnstar-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Dawnstarnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Winterhold'>
+          </div>
+          <div className='paiWinterhold'>
+          <div className='logoWinterhold' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Winterholdnav}>
+
             <div className='Winterhold-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Winterholdnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Riften'>
+          </div>
+          <div className='paiRiften'>
+          <div className='logoRiften' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Riftennav}>
             <div className='Riften-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Riftennav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Markarth'>
+          </div>
+          <div className='paiMarkarth'>
+          <div className='logoMarkarth' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Markarthnav}>
+
             <div className='Markarth-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Markarthnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-          <div className='Falkreath'>
+          </div>
+          <div className='paiFalkreath'>
+          <div className='logoFalkreath' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Falkreathnav}>
+
             <div className='Falkreath-content' onMouseEnter={Playin} onMouseLeave={Playout} onClick={Falkreathnav}>
               Clique para acessar a lore dessa Cidade
             </div>
           </div>
-
+          </div>
           <img alt='a' style={{zIndex:-20}}width={'100%'} height={'100%'} src={map} />
         </div>
 
