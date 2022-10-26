@@ -1,4 +1,5 @@
 import React from "react";
+import combate from "../audio/"
 
 export default function MusicaCombate(props){
 
