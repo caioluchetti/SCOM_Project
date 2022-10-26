@@ -356,3 +356,30 @@
     right: 1%;
     margin-top: 10%;
 }
+
+.descricao{
+    font-family: Skyrim;
+    position: absolute;
+    left: 20%;
+    margin-top: 16%;
+    width: 40%;
+    font-size: 1.4vw;
+}
+
+.combate{
+    font-family: Skyrim;
+    position: absolute;
+    left: 20%;
+    margin-top: 26%;
+    width: 40%;
+    font-size: 1.4vw;
+}
+
+.nome{
+    font-family: Skyrim;
+    position: absolute;
+    left: 20%;
+    margin-top: 10%;
+    width: 45%;
+    font-size: 3.5vw;
+}
