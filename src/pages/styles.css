@@ -541,11 +541,31 @@
 .Title {
 
     font-family: 'Skyrim';
-    font-size: large;
-    text-align: center;
+    font-size: 50pt;
+    text-align: center ;
 }
 
-.body {
+.Title2{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    border-radius: 10%;
+    box-shadow: 0 4px 10px 0px rgba(0, 0, 0, 0.2);
+    height: 10%;
+    margin-top: 2.5%;
+    align-items: center;
+    font-family: 'Skyrim';
+    font-size: 20pt;
+    text-align: center ;
+    background-image: url("../images/oldpaper.png");
+    transition: all 0.5s ease;
+}
+.Title2:hover{
+    box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.2);
+    background-image: url("../images/oldpaperstate2.png");
+    cursor: pointer;
+}
+.body{
     background-image: url("../images/background.webp");
     height: 100vh;
     width: 100vw;
@@ -562,6 +582,16 @@
     position: relative;
     background-color: white;
     z-index: 1;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+.texto{
+
+    margin-top: 5%;
+
+
 }
 
 .Capa {
