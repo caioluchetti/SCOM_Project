@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles.css';
+import '../styles/Mapa.css';
 
 function Markarth() {
     const navigate = useNavigate();

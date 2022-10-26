@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import YouTube from 'react-youtube';
 import { useNavigate } from 'react-router-dom';
-import './styles.css';
+import './styles/Mapa.css';
 import map from '../images/map.jpg'
 import sound from '../audio/soundtrack.mp3'
 import sound2 from '../audio/finallyawake.mp3'

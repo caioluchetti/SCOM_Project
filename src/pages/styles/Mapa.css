@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Skyrim';
-    src: URL('../fonts/Planewalker.otf') format('opentype');
+    src: URL('../../fonts/Planewalker.otf') format('opentype');
 }
 
 
@@ -13,7 +13,7 @@
 
 .logoWhiterun {
     position: absolute;
-    background-image: url("../images/whiterunlogo.png");
+    background-image: url("../../images/whiterunlogo.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 110%;
@@ -52,7 +52,7 @@
 
 .logoWindhelm {
     position: absolute;
-    background-image: url("../images/windhelm.png");
+    background-image: url("../../images/windhelm.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -91,7 +91,7 @@
 
 .logoSolitude {
     position: absolute;
-    background-image: url("../images/solitude.png");
+    background-image: url("../../images/solitude.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -130,7 +130,7 @@
 
 .logoDawnstar {
     position: absolute;
-    background-image: url("../images/dawnstar.png");
+    background-image: url("../../images/dawnstar.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 110%;
@@ -169,7 +169,7 @@
 
 .logoWinterhold {
     position: absolute;
-    background-image: url("../images/winterhold.png");
+    background-image: url("../../images/winterhold.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 90%;
@@ -209,7 +209,7 @@
 
 .logoMorthal {
     position: absolute;
-    background-image: url("../images/morthal.png");
+    background-image: url("../../images/morthal.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -249,7 +249,7 @@
 
 .logoRiften {
     position: absolute;
-    background-image: url("../images/riften.png");
+    background-image: url("../../images/riften.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -289,7 +289,7 @@
 
 .logoMarkarth {
     position: absolute;
-    background-image: url("../images/markarth.png");
+    background-image: url("../../images/markarth.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -329,7 +329,7 @@
 
 .logoFalkreath {
     position: absolute;
-    background-image: url("../images/falkreath.png");
+    background-image: url("../../images/falkreath.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
@@ -557,25 +557,30 @@
     font-family: 'Skyrim';
     font-size: 20pt;
     text-align: center ;
-    background-image: url("../images/oldpaper.png");
+    background-image: url("../../images/oldpaper.png");
     transition: all 0.5s ease;
 }
 .Title2:hover{
     box-shadow: 0 4px 10px 10px rgba(0, 0, 0, 0.2);
-    background-image: url("../images/oldpaperstate2.png");
+    background-image: url("../../images/oldpaperstate2.png");
     cursor: pointer;
 }
+
 .body{
-    background-image: url("../images/background.webp");
+    background-image: url("../../images/background.webp");
     height: 100vh;
     width: 100vw;
     z-index: -1;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: absolute;
 }
 
 .Undermap {
     box-shadow: inset 0px 10px 20px black;
     padding-top: 10%;
-    background-image: url("../images/background.webp");
+    background-image: url("../../images/background.webp");
     height: 100%;
     width: 100vw;
     display: block;
@@ -682,41 +687,6 @@
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 
-}
-
-
-
-.ImgOnPage {
-    position: absolute;
-    right: 1%;
-    margin-top: 10%;
-}
-
-.descricao {
-    font-family: Skyrim;
-    position: absolute;
-    left: 20%;
-    margin-top: 16%;
-    width: 40%;
-    font-size: 1.4vw;
-}
-
-.combate {
-    font-family: Skyrim;
-    position: absolute;
-    left: 20%;
-    margin-top: 26%;
-    width: 40%;
-    font-size: 1.4vw;
-}
-
-.nome {
-    font-family: Skyrim;
-    position: absolute;
-    left: 20%;
-    margin-top: 10%;
-    width: 45%;
-    font-size: 3.5vw;
 }
 
 @keyframes glow {

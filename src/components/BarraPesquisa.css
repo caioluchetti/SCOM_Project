@@ -35,47 +35,41 @@
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent;
     border-left: 13px solid black;
-    margin-top: 0px;
+    z-index: 2;
 }
 
 .bordaTrianguloD {
     position: absolute;
     top: 2px;
-    left: 264px;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 18px solid white;
-    margin-top: -2px;
-    z-index: -1;
-}
-
-.containerTrianguloD {
-    position: absolute;
-    top: 0px;
-    left: 265;
+    left: 266px;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
-    border-left: 13px solid white;
+    border-left: 16px solid white;
+    z-index: 1;
 }
 
 .trianguloE {
     position: absolute;
-    top: 2px;
+    top: 4px;
     left: 8.5px;
-    border-top: 18px solid transparent;
-    border-bottom: 18px solid transparent;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
     border-right: 13px solid black;
-    margin-top: 0px;
+    z-index: 2;
 }
 
-.containerTrianguloE {
+.bordaTrianguloE {
     position: absolute;
+    top: 2px;
+    left: 4px;
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+    border-right: 16px solid white;
+    z-index: 1;
 }
 
 .containerInput {
-    /* background-color: black;
-    border: 2px solid rgb(201, 190, 190); */
     width: 250px;
     height: 40px;
-
+    position: relative;
 }
