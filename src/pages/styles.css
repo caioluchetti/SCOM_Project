@@ -20,6 +20,7 @@
     height: 110%;
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoWhiterun:hover{
     width:  120%;
@@ -56,7 +57,9 @@
     height: 100%;
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
+
 .logoWindhelm:hover{
     width:  110%;
     height:  110%;
@@ -92,6 +95,7 @@
     height: 100%;
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoSolitude:hover{
     width:  110%;
@@ -128,6 +132,7 @@
     height: 110%;
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoDawnstar:hover{
     width:  120%;
@@ -165,6 +170,7 @@
 
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoWinterhold:hover{
     width:  100%;
@@ -202,6 +208,7 @@
 
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoMorthal:hover{
     width:  110%;
@@ -239,6 +246,7 @@
 
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoRiften:hover{
     width:  110%;
@@ -276,6 +284,7 @@
 
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoMarkarth:hover{
     width:  110%;
@@ -313,6 +322,7 @@
 
     left: 0;
     transition: all 0.5s ease;
+    cursor: pointer;
   }
 .logoFalkreath:hover{
     width:  110%;
@@ -610,6 +620,7 @@
     text-align: center;
     top: 0;
     transition: all 1s ease;
+    cursor: pointer;
 }
 .stop:hover{
     width: 11vw;
