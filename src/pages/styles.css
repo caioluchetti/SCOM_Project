@@ -1,34 +1,36 @@
 @font-face {
     font-family: 'Skyrim';
     src: URL('../fonts/Planewalker.otf') format('opentype');
-  }
+}
 
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 
 
-.logoWhiterun{
+.logoWhiterun {
     position: absolute;
     background-image: url("../images/whiterunlogo.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 110%;
     height: 110%;
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoWhiterun:hover{
-    width:  120%;
-    height:  120%;
-    left: 0vw;
-   
 }
-.logoWhiterun:hover .Whiterun-content{
+
+.logoWhiterun:hover {
+    width: 120%;
+    height: 120%;
+    left: 0vw;
+
+}
+
+.logoWhiterun:hover .Whiterun-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -40,7 +42,7 @@
     visibility: visible;
 }
 
-.paiWhiterun{
+.paiWhiterun {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -48,25 +50,26 @@
     left: 52vw;
 }
 
-.logoWindhelm{
+.logoWindhelm {
     position: absolute;
     background-image: url("../images/windhelm.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-
-.logoWindhelm:hover{
-    width:  110%;
-    height:  110%;
-    left: 0vw;
-   
 }
-.logoWindhelm:hover .Windhelm-content{
+
+.logoWindhelm:hover {
+    width: 110%;
+    height: 110%;
+    left: 0vw;
+
+}
+
+.logoWindhelm:hover .Windhelm-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -78,7 +81,7 @@
     visibility: visible;
 }
 
-.paiWindhelm{
+.paiWindhelm {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -86,24 +89,26 @@
     top: 35vh;
 }
 
-.logoSolitude{
+.logoSolitude {
     position: absolute;
     background-image: url("../images/solitude.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoSolitude:hover{
-    width:  110%;
-    height:  110%;
-    left: 0vw;
-   
 }
-.logoSolitude:hover .Solitude-content{
+
+.logoSolitude:hover {
+    width: 110%;
+    height: 110%;
+    left: 0vw;
+
+}
+
+.logoSolitude:hover .Solitude-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -115,7 +120,7 @@
     visibility: visible;
 }
 
-.paiSolitude{
+.paiSolitude {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -123,24 +128,26 @@
     top: 15.3vh;
 }
 
-.logoDawnstar{
+.logoDawnstar {
     position: absolute;
     background-image: url("../images/dawnstar.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 110%;
     height: 110%;
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoDawnstar:hover{
-    width:  120%;
-    height:  120%;
-    left: 0vw;
-   
 }
-.logoDawnstar:hover .Dawnstar-content{
+
+.logoDawnstar:hover {
+    width: 120%;
+    height: 120%;
+    left: 0vw;
+
+}
+
+.logoDawnstar:hover .Dawnstar-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -152,7 +159,7 @@
     visibility: visible;
 }
 
-.paiDawnstar{
+.paiDawnstar {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -160,10 +167,10 @@
     top: 17vh;
 }
 
-.logoWinterhold{
+.logoWinterhold {
     position: absolute;
     background-image: url("../images/winterhold.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 90%;
     height: 90%;
@@ -171,14 +178,16 @@
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoWinterhold:hover{
-    width:  100%;
-    height:  100%;
-    left: 0vw;
-   
 }
-.logoWinterhold:hover .Winterhold-content{
+
+.logoWinterhold:hover {
+    width: 100%;
+    height: 100%;
+    left: 0vw;
+
+}
+
+.logoWinterhold:hover .Winterhold-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -190,7 +199,7 @@
     visibility: visible;
 }
 
-.paiWinterhold{
+.paiWinterhold {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -198,10 +207,10 @@
     top: 18vh;
 }
 
-.logoMorthal{
+.logoMorthal {
     position: absolute;
     background-image: url("../images/morthal.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -209,14 +218,16 @@
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoMorthal:hover{
-    width:  110%;
-    height:  110%;
-    left: 0vw;
-   
 }
-.logoMorthal:hover .Morthal-content{
+
+.logoMorthal:hover {
+    width: 110%;
+    height: 110%;
+    left: 0vw;
+
+}
+
+.logoMorthal:hover .Morthal-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -228,7 +239,7 @@
     visibility: visible;
 }
 
-.paiMorthal{
+.paiMorthal {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -236,10 +247,10 @@
     top: 29.2vh;
 }
 
-.logoRiften{
+.logoRiften {
     position: absolute;
     background-image: url("../images/riften.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -247,14 +258,16 @@
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoRiften:hover{
-    width:  110%;
-    height:  110%;
-    left: 0vw;
-   
 }
-.logoRiften:hover .Riften-content{
+
+.logoRiften:hover {
+    width: 110%;
+    height: 110%;
+    left: 0vw;
+
+}
+
+.logoRiften:hover .Riften-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -266,7 +279,7 @@
     visibility: visible;
 }
 
-.paiRiften{
+.paiRiften {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -274,10 +287,10 @@
     top: 75vh;
 }
 
-.logoMarkarth{
+.logoMarkarth {
     position: absolute;
     background-image: url("../images/markarth.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -285,14 +298,16 @@
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoMarkarth:hover{
-    width:  110%;
-    height:  110%;
-    left: 0vw;
-   
 }
-.logoMarkarth:hover .Markarth-content{
+
+.logoMarkarth:hover {
+    width: 110%;
+    height: 110%;
+    left: 0vw;
+
+}
+
+.logoMarkarth:hover .Markarth-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -304,7 +319,7 @@
     visibility: visible;
 }
 
-.paiMarkarth{
+.paiMarkarth {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -312,10 +327,10 @@
     top: 45vh;
 }
 
-.logoFalkreath{
+.logoFalkreath {
     position: absolute;
     background-image: url("../images/falkreath.png");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -323,14 +338,16 @@
     left: 0;
     transition: all 0.5s ease;
     cursor: pointer;
-  }
-.logoFalkreath:hover{
-    width:  110%;
-    height:  110%;
-    left: 0vw;
-   
 }
-.logoFalkreath:hover .Falkreath-content{
+
+.logoFalkreath:hover {
+    width: 110%;
+    height: 110%;
+    left: 0vw;
+
+}
+
+.logoFalkreath:hover .Falkreath-content {
     margin-left: 29%;
     width: 10vw;
     height: 5vh;
@@ -342,7 +359,7 @@
     visibility: visible;
 }
 
-.paiFalkreath{
+.paiFalkreath {
     position: absolute;
     width: 12vw;
     height: 10vh;
@@ -350,8 +367,8 @@
     top: 73vh;
 }
 
-.Whiterun-content{
-    
+.Whiterun-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -365,8 +382,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Solitude-content{
-    
+
+.Solitude-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -380,8 +398,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Dawnstar-content{
-    
+
+.Dawnstar-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -395,8 +414,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Winterhold-content{
-    
+
+.Winterhold-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -410,8 +430,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Windhelm-content{
-    
+
+.Windhelm-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -425,8 +446,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Morthal-content{
-    
+
+.Morthal-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -440,8 +462,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Markarh-content{
-    
+
+.Markarh-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -455,8 +478,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Falkreath-content{
-    
+
+.Falkreath-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -470,8 +494,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Riften-content{
-    
+
+.Riften-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -485,8 +510,9 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.Markarth-content{
-    
+
+.Markarth-content {
+
     font-size: 0px;
     font-family: 'Skyrim';
     position: relative;
@@ -500,7 +526,8 @@
     transition: all 0.5s ease;
     visibility: visible;
 }
-.mapa{
+
+.mapa {
     box-shadow: inset 10px 10px 10px black;
     width: 100vw;
     height: 100vh;
@@ -511,20 +538,21 @@
     z-index: -1;
 }
 
-.Title{
+.Title {
 
     font-family: 'Skyrim';
     font-size: large;
-    text-align: center ;
+    text-align: center;
 }
-.body{
+
+.body {
     background-image: url("../images/background.webp");
     height: 100vh;
     width: 100vw;
     z-index: -1;
 }
 
-.Undermap{
+.Undermap {
     box-shadow: inset 0px 10px 20px black;
     padding-top: 10%;
     background-image: url("../images/background.webp");
@@ -535,32 +563,33 @@
     background-color: white;
     z-index: 1;
 }
+
 .Capa {
-  position: absolute;
-  background-color: black;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  opacity: 100%;
-  transition: all 3s 1s ease-in;
-  }
+    position: absolute;
+    background-color: black;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    opacity: 100%;
+    transition: all 3s 1s ease-in;
+}
 
 .MainContainer {
-    
+
     perspective: 1px;
     transform-style: preserve-3d;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
-  }
+}
 
-.externo{
+.externo {
     align-items: center;
     display: flex;
     flex-direction: row;
@@ -568,7 +597,7 @@
     justify-content: center;
 }
 
-.titulo{
+.titulo {
     width: 200 px;
     font-size: 5vw;
     font-family: 'Skyrim';
@@ -576,11 +605,11 @@
     margin-left: 25%;
 }
 
-.titulo#whiterun{
+.titulo#whiterun {
     color: rgb(148, 148, 8);
 }
 
-.stop{
+.stop {
     position: absolute;
     width: 10vw;
     background-color: rgb(133, 133, 133);
@@ -591,13 +620,14 @@
     transition: all 1s ease;
     cursor: pointer;
 }
-.stop:hover{
+
+.stop:hover {
     width: 11vw;
     top: 1vh;
     background-color: #ffffff;
 }
 
-.escudo{
+.escudo {
     flex-direction: row;
     align-self: baseline;
 }
@@ -611,8 +641,9 @@
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 
-  }
-  .glow2 {
+}
+
+.glow2 {
     font-size: 30px;
     font-family: 'Skyrim';
     color: #fff;
@@ -621,13 +652,49 @@
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 
-  }
-  
-  @keyframes glow {
+}
+
+
+
+.ImgOnPage {
+    position: absolute;
+    right: 1%;
+    margin-top: 10%;
+}
+
+.descricao {
+    font-family: Skyrim;
+    position: absolute;
+    left: 20%;
+    margin-top: 16%;
+    width: 40%;
+    font-size: 1.4vw;
+}
+
+.combate {
+    font-family: Skyrim;
+    position: absolute;
+    left: 20%;
+    margin-top: 26%;
+    width: 40%;
+    font-size: 1.4vw;
+}
+
+.nome {
+    font-family: Skyrim;
+    position: absolute;
+    left: 20%;
+    margin-top: 10%;
+    width: 45%;
+    font-size: 3.5vw;
+}
+
+@keyframes glow {
     from {
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
     }
+
     to {
-      text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+        text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
     }
-  }
+}

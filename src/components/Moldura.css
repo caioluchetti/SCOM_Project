@@ -1,0 +1,19 @@
+.Moldura{
+    position: relative;
+	background-image: url("../images/Background_Moldura.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 65vh;
+    width: 65vh;
+    /* transform: rotate(1); */
+}
+
+.CenterImg{
+    position: absolute;
+    top: 5%;
+    left: 15.5%;
+    height: 87.8%;
+    width: 70%;
+    /* transform: rotate(0.3deg); */
+}
+
