@@ -17,6 +17,7 @@ function App() {
     if(start == "sim"){
       setTexto("Loading...")
       tocar();
+      myRef.current.play();
       document.getElementById('capa').style.opacity = 0;
       document.getElementById('capa').style.zIndex = -2;
       document.getElementById('capa').style.backgroundColor = 'white'
