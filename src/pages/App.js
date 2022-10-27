@@ -142,6 +142,12 @@ async function dois() {
         <div className='stop' onClick={pararcontinuar}>
           {textobot}
         </div>
+        <div className='box'>
+        <div className='Title3'>
+          Mapa de Skyrim
+        </div>
+        </div>
+        
         <div className='mapa'>
 
           <div className='paiWindhelm'>
