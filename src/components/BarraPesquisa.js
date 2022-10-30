@@ -1,7 +1,10 @@
 import React from "react";
+import { ReactDOM } from "react";
 import "./BarraPesquisa.css"
 
 export default function BarraPesquisa(props) {
+
+
     return (
         <>
             <div className="containerInput">
@@ -11,15 +14,25 @@ export default function BarraPesquisa(props) {
                 </div>
                 <input
                     className="inputBusca"
-                    onChange={(element) => props.conteudo(element.target.value)}
                     placeholder="Pesquisar Criatura..."
                     list="criaturas"
+                    onKeyUp={(event) => {
+                        if (event.key === "Enter") {
+                            const criatura = props.criaturas.find(el => el.nome === event.target.value)
+                            console.log('object :>> ', event.target.key);
+                            if (criatura) props.conteudo(criatura.idCriatura)
+                        }
+                    }}
                 />
-                <datalist id='criaturas'>
+                <datalist id='criaturas' >
                     {
                         props.criaturas?.map(criatura => {
                             return (
-                                <option>{criatura.nome}</option>
+                                <option
+                                    key={criatura.idCriatura}
+                                >
+                                    {criatura.nome}
+                                </option>
                             )
                         })
                     }
