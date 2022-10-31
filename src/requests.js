@@ -17,6 +17,10 @@ const requests = {
     getBestiario: async function getBestiario() {
         const bestiario = await axios.get('/bestiario')
         if (bestiario) return bestiario.data
+    },
+    getCidade: async function getCidade(nome) {
+        const cidade = await axios.get(`/cidade/${nome}`)
+        if (cidade) return cidade.data
     }
 }
 
