@@ -40,8 +40,14 @@ export default function Bestiario() {
 
     async function getResponses() {
         const nome = getParamUrl('nome')
-        const responseCidade = await requests.getCidade(nome)
-        setCidade(responseCidade)
+        try {
+            const responseCidade = await requests.getCidade(nome)
+            setCidade(responseCidade)
+        } catch (err) {
+            if (err.response.data) alert(err.response.data.error)
+            else alert(err.message)
+        }
+
     }
 
     useEffect(() => {
@@ -58,7 +64,7 @@ export default function Bestiario() {
             <div className="criaturaContainer">
                 {/* foto da cidade */}
                 <div className="ImgOnPage">
-                    <img src={brasoes[cidade?.nome]} width={500} style={{marginTop:"-100px"}}/>
+                    <img src={brasoes[cidade?.nome]} width={500} style={{ marginTop: "-100px" }} />
                 </div>
 
                 {/* descrição da cidade */}

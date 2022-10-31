@@ -20,10 +20,16 @@ export default function Bestiario() {
 
     async function getResponses() {
         const id = getParamUrl('id')
-        const responseCriaturas = await requests.getCriaturas()
-        const responseCriaturaId = await requests.getCriaturaId(id)
-        setCriaturas(responseCriaturas)
-        setCriaturaId(responseCriaturaId)
+        try{
+            const responseCriaturas = await requests.getCriaturas()
+            const responseCriaturaId = await requests.getCriaturaId(id)
+            setCriaturas(responseCriaturas)
+            setCriaturaId(responseCriaturaId)
+        } catch(err){
+            if(err.response.data) alert(err.response.data.error)
+            else alert(err.message)
+        }
+        
     }
 
     useEffect(() => {
@@ -39,10 +45,10 @@ export default function Bestiario() {
                 <BarraPesquisa conteudo={(res) => navigate(`/criatura?id=${res}`)} criaturas={criaturas} />
             </div>
             <div className="criaturaContainer">
-                {/* foto da criatura */}
-                <div className="ImgOnPage">
+                {/* foto da criatura Pt 2*/}
+                {/* <div className="ImgOnPage">
                     <Moldura imagem={criaturaId?.nome} />
-                </div>
+                </div> */}
 
                 {/* descrição da criatura */}
                 <div className="containerDescricao">
