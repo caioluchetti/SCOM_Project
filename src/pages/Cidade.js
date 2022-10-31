@@ -56,12 +56,12 @@ export default function Bestiario() {
                 <button className="botaoBestiario" onClick={() => navigate('/')}>Mapa</button>
             </div>
             <div className="criaturaContainer">
-                {/* foto da criatura */}
+                {/* foto da cidade */}
                 <div className="ImgOnPage">
-                    <img src={brasoes[cidade?.nome]} width={500} />
+                    <img src={brasoes[cidade?.nome]} width={500} style={{marginTop:"-100px"}}/>
                 </div>
 
-                {/* descrição da criatura */}
+                {/* descrição da cidade */}
                 <div className="containerDescricao">
                     <div className="nome">
                         <p>
