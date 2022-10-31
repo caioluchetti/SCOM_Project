@@ -132,6 +132,9 @@ function App() {
       await requests.postComentario(paramComent)
       alert("Comentário enviado!")
       getResponses()
+      setCidadeSelecionada('')
+      setComment('')
+      setNome('')
     } catch (err) {
       if (err.response.data) alert(err.response.data.error)
       else alert(err.message)
@@ -262,10 +265,10 @@ function App() {
             <div className='caixa'>
               <div className='caixinha'>
               <div className='nome'>
-                <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)}></input>
+                <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)} value={nome}></input>
               </div>
               <div className='comentario'>
-                <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+                <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)} value={comment}></input>
               </div>
               </div>
               
