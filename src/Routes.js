@@ -29,8 +29,8 @@ function Rotas(){
                 <Route path="/Solitude" element={<Solitude/>}/>
                 <Route path="/Whiterun" element={<Whiterun/>}/>
                 <Route path="/Winterhold" element={<Winterhold/>}/>
-                <Route path="/Bestiario" element={<Bestiario/>}/>
-                <Route path="/Criatura" element={<Criatura/>}/>
+                <Route path="/bestiario" element={<Bestiario/>}/>
+                <Route path="/criatura" element={<Criatura/>}/>
             </Routes>
 
         </Router>
