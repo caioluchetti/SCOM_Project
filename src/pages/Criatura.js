@@ -36,6 +36,7 @@ export default function Bestiario() {
         <div className="body">
             {/* Barra de pesquisa */}
             <div className="barraPesquisa">
+                <button className="botaoBestiario" onClick={() => navigate('/bestiario')}>Bestiário</button>
                 <BarraPesquisa conteudo={(res) => navigate(`/criatura?id=${res}`)} criaturas={criaturas} />
             </div>
             <div className="criaturaContainer">

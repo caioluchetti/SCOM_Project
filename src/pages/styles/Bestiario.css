@@ -40,6 +40,7 @@
 
 .barraPesquisa {
     margin: 20px;
+    display: flex;
 }
 
 .criaturaContainer {
@@ -48,4 +49,47 @@
 
 .containerBestiario {
     margin-top: 80px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
+.botaoBestiario {
+    margin-left: 15px;
+    font-family: Skyrim;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+    padding: 8px;
+    font-size: 13pt;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.listaGrupos {
+    margin-left: 30px;
+}
+
+.listaGrupos li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 23pt;
+    font-family: Skyrim;
+}
+
+.listaCriaturas {
+    margin-left: 30px;
+}
+
+.listaCriaturas li {
+    list-style: circle;
+    margin: 7px 0;
+    font-size: 23pt;
+    font-family: Skyrim;
+}
+
+.logo {
+    position: absolute;
+    right: 5vw;
+    top: 15vh;
+    width: 60vw;
 }

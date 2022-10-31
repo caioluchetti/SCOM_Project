@@ -31,7 +31,7 @@
 .trianguloD {
     position: absolute;
     top: 4px;
-    left: 264px;
+    left: 263px;
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent;
     border-left: 13px solid black;
@@ -41,7 +41,7 @@
 .bordaTrianguloD {
     position: absolute;
     top: 2px;
-    left: 266px;
+    left: 265px;
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent;
     border-left: 16px solid white;
@@ -51,7 +51,7 @@
 .trianguloE {
     position: absolute;
     top: 4px;
-    left: 8.5px;
+    left: 9px;
     border-top: 16px solid transparent;
     border-bottom: 16px solid transparent;
     border-right: 13px solid black;

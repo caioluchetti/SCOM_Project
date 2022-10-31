@@ -6,6 +6,7 @@ import Moldura from "../components/Moldura";
 import BarraPesquisa from "../components/BarraPesquisa";
 import requests from "../requests";
 import { useNavigate, Link } from 'react-router-dom';
+import logo from '../images/Skyrim-Symbol.png'
 
 export default function Bestiario() {
 
@@ -29,15 +30,16 @@ export default function Bestiario() {
         <div className="body">
             {/* Barra de pesquisa */}
             <div className="barraPesquisa">
+                <button className="botaoBestiario" onClick={() => navigate('/')}>Mapa</button>
                 <BarraPesquisa conteudo={(res) => navigate(`/criatura?id=${res}`)} criaturas={criaturas} />
             </div>
             <div className="containerBestiario">
-                <ul>
+                <ul className="listaGrupos">
                     {bestiario?.map((grupo, index) => {
                         return (
                             <li key={index}>
                                 <h1>{grupo.grupo}</h1>
-                                <ul>
+                                <ul className="listaCriaturas">
                                     {grupo.criaturas.map(criatura => {
                                         return (
                                             <li key={criatura.idCriatura}>
@@ -53,6 +55,7 @@ export default function Bestiario() {
                     }
                 </ul>
             </div>
+            <img className="logo" src={logo} />
         </div>
     )
 }
