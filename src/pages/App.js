@@ -11,6 +11,7 @@ import sound4 from '../audio/out2.mp3'
 function App() {
 
   const [start, setStart] = useState('');
+  const [comment, setComment] = useState('');
 
   useEffect(() => {
 
@@ -209,6 +210,12 @@ function App() {
             <YouTube videoId="JSRtYpNRoN0" />
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
+          <div className='comentario'>
+          <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+          </div>
+          <div className='button' >
+                <button  type = 'button'  >ENVIAR</button>
+          </div>
         </div>
       </div>
 
