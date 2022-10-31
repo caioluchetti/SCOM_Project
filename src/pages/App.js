@@ -7,11 +7,14 @@ import sound from '../audio/soundtrack.mp3'
 import sound2 from '../audio/finallyawake.mp3'
 import sound3 from '../audio/in2.mp3'
 import sound4 from '../audio/out2.mp3'
+import requests from '../requests';
 
 function App() {
 
   const [start, setStart] = useState('');
   const [comment, setComment] = useState('');
+  const [cidadeSelecionada, setCidadeSelecionada] = useState('');
+  const [cidades, setCidades] = useState();
 
   useEffect(() => {
 
@@ -93,6 +96,20 @@ function App() {
   const Beastiarynav = () => {
     navigate(`/bestiario`)
   }
+
+  async function getResponses() {
+    try {
+      const responseCidades = await requests.getCidades()
+      setCidades(responseCidades)
+    } catch (err) {
+      if (err.response.data) alert(err.response.data.error)
+      else alert(err.message)
+    }
+  }
+
+  useEffect(() => {
+    getResponses()
+  }, []);
 
   return (
     <>
@@ -211,10 +228,18 @@ function App() {
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
           <div className='comentario'>
-          <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+            <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+            <select onChange={(el) => setCidadeSelecionada(el.target.value)}>
+              <option value='' disabled>Selecione sua Cidade Preferida</option>
+              {cidades.map(cidade => {
+                return (
+                  <option value={cidade.id}>{cidade.nome}</option>
+                )
+              })}
+            </select>
           </div>
           <div className='button' >
-                <button  type = 'button'  >ENVIAR</button>
+            <button type='button'  >ENVIAR</button>
           </div>
         </div>
       </div>
