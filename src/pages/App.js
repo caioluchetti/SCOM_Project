@@ -238,7 +238,7 @@ function App() {
             </div>
             <select onChange={(el) => setCidadeSelecionada(el.target.value)}>
               <option value='' disabled>Selecione sua Cidade Preferida</option>
-              {cidades.map(cidade => {
+              {cidades?.map(cidade => {
                 return (
                   <option value={cidade.id}>{cidade.nome}</option>
                 )
