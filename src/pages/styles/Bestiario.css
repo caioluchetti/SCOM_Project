@@ -72,7 +72,7 @@
 .listaGrupos li {
     list-style: none;
     margin: 15px 0;
-    font-size: 23pt;
+    font-size: 1.5vw;
     font-family: Skyrim;
 }
 
@@ -83,7 +83,7 @@
 .listaCriaturas li {
     list-style: circle;
     margin: 7px 0;
-    font-size: 23pt;
+    font-size: 2vw;
     font-family: Skyrim;
 }
 

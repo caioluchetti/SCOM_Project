@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import './styles/Bestiario.css'
-import json from '../databaseBestiario.json'
 import Botao from "../components/Botao";
 import Moldura from "../components/Moldura";
 import BarraPesquisa from "../components/BarraPesquisa";

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import './styles/Bestiario.css'
-import json from '../databaseBestiario.json'
 import Botao from "../components/Botao";
 import Moldura from "../components/Moldura";
 import BarraPesquisa from "../components/BarraPesquisa";
@@ -42,7 +41,7 @@ export default function Bestiario() {
             <div className="criaturaContainer">
                 {/* foto da criatura */}
                 <div className="ImgOnPage">
-                    <Moldura imagem={json.foto} />
+                    <Moldura imagem={criaturaId?.nome} />
                 </div>
 
                 {/* descrição da criatura */}
