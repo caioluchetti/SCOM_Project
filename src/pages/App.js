@@ -16,6 +16,7 @@ function App() {
   const [cidadeSelecionada, setCidadeSelecionada] = useState('');
   const [cidades, setCidades] = useState();
   const [nome, setNome] = useState('');
+  const [comentarios, setComentarios] = useState([]);
 
 
   useEffect(() => {
@@ -101,8 +102,11 @@ function App() {
 
   async function getResponses() {
     try {
+      const responseComentarios = await requests.getComentario()
       const responseCidades = await requests.getCidades()
       setCidades(responseCidades)
+      setComentarios(responseComentarios)
+
     } catch (err) {
       if (err.response.data) alert(err.response.data.error)
       else alert(err.message)
@@ -111,7 +115,31 @@ function App() {
 
   useEffect(() => {
     getResponses()
+
   }, []);
+
+  const postComentario1 = async () =>{
+
+
+    console.log(cidadeSelecionada)
+    const paramComent = {
+      idCidade: cidadeSelecionada,
+      nome: nome,
+      comentario: comment,
+    }
+    console.log(paramComent)
+    try{
+      await requests.postComentario(paramComent)
+      alert("Comentário enviado!")
+      getResponses()
+    }catch (err) {
+      if (err.response.data) alert(err.response.data.error)
+      else alert(err.message)
+  }
+    }
+    
+    
+
 
   return (
     <>
@@ -236,9 +264,10 @@ function App() {
             <div className='comentario'>
               <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
             </div>
-            <select onChange={(el) => setCidadeSelecionada(el.target.value)}>
+            <select onChange={(el) => setCidadeSelecionada(el.target.value)} value={cidadeSelecionada}>
               <option value='' disabled>Selecione sua Cidade Preferida</option>
               {cidades?.map(cidade => {
+                
                 return (
                   <option key={cidade.idCidade} value={cidade.idCidade}>{cidade.nome}</option>
                 )
@@ -247,7 +276,7 @@ function App() {
           </div>
 
           <div className='button' >
-            <button type='button'  >ENVIAR</button>
+            <button type='button'  onClick={postComentario1}>ENVIAR</button>
           </div>
         </div>
       </div>
