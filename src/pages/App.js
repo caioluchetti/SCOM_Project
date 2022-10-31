@@ -12,6 +12,8 @@ function App() {
 
   const [start, setStart] = useState('');
   const [comment, setComment] = useState('');
+  const [nome, setNome] = useState('');
+
 
   useEffect(() => {
 
@@ -210,11 +212,17 @@ function App() {
             <YouTube videoId="JSRtYpNRoN0" />
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
-          <div className='comentario'>
-          <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+          <div className='caixa'>
+            <div className='nome'>
+              <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)}></input>
+            </div>
+            <div className='comentario'>
+              <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+            </div>
           </div>
+
           <div className='button' >
-                <button  type = 'button'  >ENVIAR</button>
+            <button type='button'  >ENVIAR</button>
           </div>
         </div>
       </div>

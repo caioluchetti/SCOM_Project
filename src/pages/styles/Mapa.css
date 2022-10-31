@@ -707,9 +707,9 @@
 
 }
 
-.email {
+.comentario {
     margin-top: 10px;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
 }
 
 .comentario input{
@@ -727,6 +727,36 @@
     margin-top: 25px;
     margin-bottom: 10px;
 }
+
+.caixa{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.nome input{
+    width: 15vw;
+    height: 7vh;
+    box-sizing: border-box;
+    background-image: url("../../images/oldpaperstate2.png");
+    border: 2px solid #097828;
+    border-radius: 16px;
+    font-size: 4vh;
+    text-align: center;
+    transition: all 400ms ease;
+    font-family: 'Skyrim';
+    outline: 0;
+    margin-top: 25px;
+
+}
+
 
 .button button {
     box-sizing: border-box;
