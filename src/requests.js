@@ -21,7 +21,15 @@ const requests = {
     getCidade: async function getCidade(nome) {
         const cidade = await axios.get(`/cidade/${nome}`)
         if (cidade) return cidade.data
-    }
+    },
+    getComentario: async function getComentario() {
+        const comentario = await axios.get('/comentario')
+        if (comentario) return comentario.data
+    },
+    postComentario: async function getCidade(body) {
+        const comentario = await axios.post('/comentario', body)
+        if (comentario) return comentario.data
+    },
 }
 
 export default requests
