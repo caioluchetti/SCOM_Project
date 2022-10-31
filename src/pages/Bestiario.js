@@ -33,15 +33,15 @@ export default function Bestiario() {
             </div>
             <div className="containerBestiario">
                 <ul>
-                    {bestiario?.map(grupo => {
+                    {bestiario?.map((grupo, index) => {
                         return (
-                            <li>
+                            <li key={index}>
                                 <h1>{grupo.grupo}</h1>
                                 <ul>
                                     {grupo.criaturas.map(criatura => {
                                         return (
-                                            <li>
-                                                <Link style={{ textDecoration: 'none', color: 'black' }}>{criatura.nome}</Link>
+                                            <li key={criatura.idCriatura}>
+                                                <Link style={{ textDecoration: 'none', color: 'black' }} to={`/criatura?id=${criatura.idCriatura}`}>{criatura.nome}</Link>
                                             </li>
                                         )
                                     })}
