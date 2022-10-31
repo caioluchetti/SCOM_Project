@@ -560,6 +560,23 @@
     background-image: url("../../images/oldpaper.png");
     transition: all 0.5s ease;
 }
+.Title4{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    border-radius: 10%;
+
+    height: 10%;
+    margin-top: 2.5%;
+    align-items: center;
+    font-family: 'Skyrim';
+    font-size: 20pt;
+    text-align: center ;
+    transition: all 0.5s ease;
+    color: black;
+    text-align: center;
+}
 
 .box{
     top: 5vh;
@@ -708,8 +725,7 @@
 }
 
 .comentario {
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .comentario input{
@@ -724,21 +740,42 @@
     transition: all 400ms ease;
     font-family: 'Skyrim';
     outline: 0;
-    margin-top: 25px;
+
     margin-bottom: 10px;
 }
 
 .caixa{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+    margin-right: 5px;
     align-items: center;
 }
-
-.nome {
+.comentarios{
+    margin-left: 5px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y:auto;
     margin-top: 10px;
-    margin-bottom: 30px;
-    margin-right: 10px;
+
+}
+.commentInd{
+    border: 2px solid #000000;
+    margin-bottom: 5px;
+    border-radius: 5%;
+    background-image: url("../../images/oldpaperstate2.png");
+    width: 25vw;
+}
+
+.caixao{
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+}
+.nome {
+
+    margin-bottom: 5px;    margin-right: 10px;
 }
 
 .nome input{
@@ -753,7 +790,7 @@
     transition: all 400ms ease;
     font-family: 'Skyrim';
     outline: 0;
-    margin-top: 25px;
+    margin-top: 10px;
 
 }
 
@@ -771,10 +808,33 @@
     font-size: 20px;
     line-height: 30px;
     transition: all 400ms ease;
-
+    margin-top: 10px;
     color: #000000;
 
 }
+
+
+
+.Nome1{
+    text-align: center;
+    color: #000000;
+    font-family: 'Skyrim';
+    font-size: 3vh;
+}
+
+.Cidade1{
+    color: black;
+    font-family: 'Skyrim';
+    font-size: 2vh;
+}
+.Comment1{
+    font-size: 2vh;
+    font-family: 'Skyrim';
+    margin-top: 1vh;
+}
+
+
+
 
 @keyframes glow {
     from {

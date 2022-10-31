@@ -257,40 +257,47 @@ function App() {
             <YouTube videoId="JSRtYpNRoN0" />
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
-          <div className='caixa'>
-            <div className='nome'>
-              <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)}></input>
-            </div>
-            <div className='comentario'>
-              <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
-            </div>
-            <select onChange={(el) => setCidadeSelecionada(el.target.value)} value={cidadeSelecionada}>
-              <option value='' disabled>Selecione sua Cidade Preferida</option>
-              {cidades?.map(cidade => {
+          <div className='Title4'>Confeccione um Comentário, Artesão!</div>
+          <div className='caixao'>
+            <div className='caixa'>
+              <div className='caixinha'>
+              <div className='nome'>
+                <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)}></input>
+              </div>
+              <div className='comentario'>
+                <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+              </div>
+              </div>
+              
+              <select onChange={(el) => setCidadeSelecionada(el.target.value)} value={cidadeSelecionada}>
+                <option value='' disabled>Selecione sua Cidade Preferida</option>
+                {cidades?.map(cidade => {
 
+                  return (
+                    <option key={cidade.idCidade} value={cidade.idCidade}>{cidade.nome}</option>
+                  )
+                })}
+              </select>
+
+
+              <div className='button' >
+                <button type='button' onClick={postComentario1}>ENVIAR</button>
+              </div>
+            </div>
+            <div className='comentarios'>
+              {comentarios?.map(comentario => {
                 return (
-                  <option key={cidade.idCidade} value={cidade.idCidade}>{cidade.nome}</option>
+                  <div className='commentInd'>
+                    <div className='Nome1'>{comentario.nome}</div>
+                    <div className='Cidade1'><b>Cidade favorita:</b>{comentario.cidade.nome}</div>
+                    <div className='Comment1'>{comentario.comentario}</div>
+
+                  </div>
                 )
               })}
-            </select>
+            </div>
           </div>
 
-          <div className='button' >
-            <button type='button' onClick={postComentario1}>ENVIAR</button>
-          </div>
-
-          <div>
-            {comentarios?.map(comentario => {
-              return (
-                <div style={{ border: "1px solid black" }}>
-                  <p>{comentario.nome}</p>
-                  <p>{comentario.cidade.nome}</p>
-                  <p>{comentario.comentario}</p>
-
-                </div>
-              )
-            })}
-          </div>
         </div>
       </div>
 
