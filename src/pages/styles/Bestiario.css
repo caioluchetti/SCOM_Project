@@ -1,4 +1,4 @@
-.containerBestiario{
+.containerBestiario {
     margin: 0;
     padding: 0;
     top: 0;
@@ -11,41 +11,41 @@
     margin-top: 10%;
 }
 
-.descricao {
-    font-family: Skyrim;
+.containerDescricao {
     position: absolute;
-    left: 20%;
-    margin-top: 16%;
-    width: 40%;
-    font-size: 1.4vw;
+    top: 100px;
+    width: 50vw;
 }
 
-.combate {
+.descricao1 {
     font-family: Skyrim;
-    position: absolute;
-    left: 20%;
-    margin-top: 26%;
-    width: 40%;
+    font-size: 1.4vw;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.descricao2 {
+    font-family: Skyrim;
+    margin-top: 30px;
+    margin-left: 30px;
     font-size: 1.4vw;
 }
 
 .nome {
     font-family: Skyrim;
-    position: absolute;
-    left: 20%;
-    margin-top: 10%;
-    width: 45%;
     font-size: 3.5vw;
+    display: flex;
+    justify-content: center;
 }
 
 .barraPesquisa {
     margin: 20px;
 }
 
-.criaturaContainer{
+.criaturaContainer {
     margin-top: -80px;
 }
 
-.containerBestiario{
+.containerBestiario {
     margin-top: 80px;
 }

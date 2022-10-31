@@ -44,25 +44,27 @@ export default function Bestiario() {
                     <Moldura imagem={json.foto} />
                 </div>
 
-                {/* nome da criatura */}
-                <div className="nome">
-                    <p>
-                        {criaturaId?.nome}
-                    </p>
-                </div>
-
                 {/* descrição da criatura */}
-                <div className="descricao">
-                    <p>
-                        {criaturaId?.descricao1}
-                    </p>
+                <div className="containerDescricao">
+                    <div className="nome">
+                        <p>
+                            {criaturaId?.nome}
+                        </p>
+                    </div>
+
+                    <div className="descricao1">
+                        <p>
+                            {criaturaId?.descricao1}
+                        </p>
+                    </div>
+
+                    <div className="descricao2">
+                        <p>
+                            {criaturaId?.descricao2}
+                        </p>
+                    </div>
                 </div>
 
-                <div className="combate">
-                    <p>
-                        {criaturaId?.descricao2}
-                    </p>
-                </div>
             </div>
         </div>
     )
