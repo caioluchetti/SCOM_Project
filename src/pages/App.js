@@ -118,7 +118,7 @@ function App() {
 
   }, []);
 
-  const postComentario1 = async () =>{
+  const postComentario1 = async () => {
 
 
     console.log(cidadeSelecionada)
@@ -128,17 +128,17 @@ function App() {
       comentario: comment,
     }
     console.log(paramComent)
-    try{
+    try {
       await requests.postComentario(paramComent)
       alert("Comentário enviado!")
       getResponses()
-    }catch (err) {
+    } catch (err) {
       if (err.response.data) alert(err.response.data.error)
       else alert(err.message)
-  }
     }
-    
-    
+  }
+
+
 
 
   return (
@@ -267,7 +267,7 @@ function App() {
             <select onChange={(el) => setCidadeSelecionada(el.target.value)} value={cidadeSelecionada}>
               <option value='' disabled>Selecione sua Cidade Preferida</option>
               {cidades?.map(cidade => {
-                
+
                 return (
                   <option key={cidade.idCidade} value={cidade.idCidade}>{cidade.nome}</option>
                 )
@@ -276,7 +276,20 @@ function App() {
           </div>
 
           <div className='button' >
-            <button type='button'  onClick={postComentario1}>ENVIAR</button>
+            <button type='button' onClick={postComentario1}>ENVIAR</button>
+          </div>
+
+          <div>
+            {comentarios?.map(comentario => {
+              return (
+                <div style={{ border: "1px solid black" }}>
+                  <p>{comentario.nome}</p>
+                  <p>{comentario.cidade.nome}</p>
+                  <p>{comentario.comentario}</p>
+
+                </div>
+              )
+            })}
           </div>
         </div>
       </div>
