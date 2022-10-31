@@ -15,6 +15,8 @@ function App() {
   const [comment, setComment] = useState('');
   const [cidadeSelecionada, setCidadeSelecionada] = useState('');
   const [cidades, setCidades] = useState();
+  const [nome, setNome] = useState('');
+
 
   useEffect(() => {
 
@@ -227,8 +229,13 @@ function App() {
             <YouTube videoId="JSRtYpNRoN0" />
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
-          <div className='comentario'>
-            <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+          <div className='caixa'>
+            <div className='nome'>
+              <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)}></input>
+            </div>
+            <div className='comentario'>
+              <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)}></input>
+            </div>
             <select onChange={(el) => setCidadeSelecionada(el.target.value)}>
               <option value='' disabled>Selecione sua Cidade Preferida</option>
               {cidades.map(cidade => {
@@ -238,6 +245,7 @@ function App() {
               })}
             </select>
           </div>
+
           <div className='button' >
             <button type='button'  >ENVIAR</button>
           </div>
