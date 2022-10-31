@@ -18,7 +18,11 @@ const requests = {
         const bestiario = await axios.get('/bestiario')
         if (bestiario) return bestiario.data
     },
-    getCidade: async function getCidade(nome) {
+    getCidade: async function getCidade() {
+        const cidades = await axios.get('/cidade')
+        if (cidades) return cidades.data
+    },
+    getCidadeNome: async function getCidadeNome(nome) {
         const cidade = await axios.get(`/cidade/${nome}`)
         if (cidade) return cidade.data
     },
@@ -26,7 +30,7 @@ const requests = {
         const comentario = await axios.get('/comentario')
         if (comentario) return comentario.data
     },
-    postComentario: async function getCidade(body) {
+    postComentario: async function postComentario(body) {
         const comentario = await axios.post('/comentario', body)
         if (comentario) return comentario.data
     },

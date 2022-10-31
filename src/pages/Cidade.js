@@ -41,7 +41,7 @@ export default function Bestiario() {
     async function getResponses() {
         const nome = getParamUrl('nome')
         try {
-            const responseCidade = await requests.getCidade(nome)
+            const responseCidade = await requests.getCidadeNome(nome)
             setCidade(responseCidade)
         } catch (err) {
             if (err.response.data) alert(err.response.data.error)
