@@ -539,7 +539,7 @@
 }
 
 .Title {
-
+    margin-top: 50px;
     font-family: 'Skyrim';
     font-size: 50pt;
     text-align: center ;
@@ -728,12 +728,12 @@
     margin-bottom: 5px;
 }
 
-.comentario input{
+.comentario input,select{
     width: 30vw;
     height: 10vh;
     box-sizing: border-box;
     background-image: url("../../images/oldpaperstate2.png");
-    border: 2px solid #097828;
+    border: 2px solid #aa3131;
     border-radius: 16px;
     font-size: 4vh;
     text-align: center;
@@ -772,6 +772,7 @@
     height: 30vh;
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 }
 .nome {
 
@@ -783,7 +784,7 @@
     height: 7vh;
     box-sizing: border-box;
     background-image: url("../../images/oldpaperstate2.png");
-    border: 2px solid #097828;
+    border: 2px solid #aa3131;
     border-radius: 16px;
     font-size: 4vh;
     text-align: center;
@@ -826,11 +827,13 @@
     color: black;
     font-family: 'Skyrim';
     font-size: 2vh;
+    margin-left: 5px;
 }
 .Comment1{
     font-size: 2vh;
     font-family: 'Skyrim';
     margin-top: 1vh;
+    margin-left: 5px;
 }
 
 
