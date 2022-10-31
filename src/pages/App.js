@@ -240,7 +240,7 @@ function App() {
               <option value='' disabled>Selecione sua Cidade Preferida</option>
               {cidades?.map(cidade => {
                 return (
-                  <option value={cidade.id}>{cidade.nome}</option>
+                  <option value={cidade.idCidade}>{cidade.nome}</option>
                 )
               })}
             </select>
