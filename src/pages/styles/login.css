@@ -1,0 +1,176 @@
+.body {
+    background-image: url("../../images/background.webp");
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    position: absolute;
+}
+
+.formulario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.titulo {
+    width: 100%;
+    margin-left: 90px;
+    font-family: 'Skyrim';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: black;
+}
+
+.email {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+.email label {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 20px;
+    color: black;
+    
+}
+
+
+.email input {
+    width: 523px;
+    height: 50px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 2px solid gray;
+    border-radius: 16px;
+    text-indent: 10px;
+    font-size: 20px;
+    transition: all 400ms ease;
+    outline: 0;
+    margin-top: 25px;
+}
+
+.email input:focus {
+
+    background: 0, 0, 0, 0 rgb(211, 211, 211);
+
+
+}
+
+.email input:hover {
+    background: 0, 0, 0, 0 rgb(211, 211, 211);
+
+}
+
+.password input:hover {
+    background: 0, 0, 0, 0 rgb(211, 211, 211);
+
+}
+
+.password input:focus {
+    background: 0, 0, 0, 0 rgb(211, 211, 211);
+
+}
+
+
+
+.password {
+    margin-bottom: 68px;
+}
+.password label {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 20px;
+    color: black;
+    
+}
+
+.password input {
+    width: 523px;
+    height: 50px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 2px solid gray;
+    border-radius: 16px;
+    text-indent: 10px;
+    font-size: 20px;
+    font-family: 'Poppins';
+    outline: 0;
+    margin-top: 25px;
+    transition: all 400ms ease;
+}
+
+.password input::placeholder {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 10px;
+
+    color: rgb(70, 70, 70);
+
+
+}
+
+.email input::placeholder {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    text-indent: 10px;
+    transition: all 400ms ease;
+
+    color: rgb(70, 70, 70);
+
+
+}
+
+.button button {
+    box-sizing: border-box;
+    font-family: 'Skyrim';
+    width: 263px;
+    height: 68px;
+    background: gray;
+    border: 3px solid #FFFFFF;
+    border-radius: 30px;
+    margin-left: 130px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    transition: all 400ms ease;
+
+    color: #FFFFFF;
+
+}
+
+.button button:hover {
+    background: 0, 0, 0, 0 #36a555;
+
+}
+
+.voltar{
+    position: absolute;
+    font-family: 'Skyrim';
+    height: 5vh;
+    width: 8vw;
+    background-color: rgb(165, 165, 165);
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: all 500ms ease;
+    border-radius: 10%;
+}
+.voltar:hover{
+    height: 5.5vh;
+    width: 8.8vw;
+}
