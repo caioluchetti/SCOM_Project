@@ -99,7 +99,9 @@ function App() {
   const Beastiarynav = () => {
     navigate(`/bestiario`)
   }
-
+  const Loginnav = () => {
+    navigate(`/login`)
+  }
   async function getResponses() {
     try {
       const responseComentarios = await requests.getComentario()
@@ -171,6 +173,11 @@ function App() {
 
         <div className='stop' onClick={pararcontinuar}>
           {textobot}
+        </div>
+        <div className='login' onClick={Loginnav}>
+          <div className='login-content' onClick={Loginnav}>
+            Faça seu Login/Cadastro!
+          </div>
         </div>
         <div className='box'>
           <div className='Title3'>

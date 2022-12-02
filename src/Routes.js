@@ -5,7 +5,7 @@ import Main from './pages/App'
 import Bestiario from './pages/Bestiario'
 import Criatura from './pages/Criatura'
 import Cidade from './pages/Cidade'
-
+import Login from './pages/Login'
 
 function Rotas(){
     return (
@@ -15,6 +15,8 @@ function Rotas(){
                 <Route path="/bestiario" element={<Bestiario/>}/>
                 <Route path="/criatura" element={<Criatura/>}/>
                 <Route path="/cidade" element={<Cidade/>}/>
+                <Route path="/login" element={<Login/>}/>
+
             </Routes>
 
         </Router>
