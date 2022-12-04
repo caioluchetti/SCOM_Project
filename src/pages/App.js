@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
+import { ReactDOM } from 'react';
 import YouTube from 'react-youtube';
 import { useNavigate } from 'react-router-dom';
 import './styles/Mapa.css';
@@ -8,6 +9,7 @@ import sound2 from '../audio/finallyawake.mp3'
 import sound3 from '../audio/in2.mp3'
 import sound4 from '../audio/out2.mp3'
 import requests from '../requests';
+import tatu from '../images/tatu.gif'
 
 function App() {
 
@@ -17,7 +19,6 @@ function App() {
   const [cidades, setCidades] = useState();
   const [comentarios, setComentarios] = useState([]);
   const [usuario, setUsuario] = useState({})
-
 
   useEffect(() => {
     setStart(localStorage.getItem("condicao"))
@@ -120,24 +121,24 @@ function App() {
   }, []);
 
   const postComentario1 = async () => {
-
-
-    console.log(cidadeSelecionada)
-    const paramComent = {
-      idCidade: cidadeSelecionada,
-      nome: usuario.usuario,
-      comentario: comment,
-    }
-    console.log(paramComent)
-    try {
-      await requests.postComentario(paramComent)
-      alert("Comentário enviado!")
-      getResponses()
-      setCidadeSelecionada('')
-      setComment('')
-    } catch (err) {
-      if (err.response.data) alert(err.response.data.error)
-      else alert(err.message)
+    if (comment.toLocaleUpperCase() === "TATU") {
+      aparecerTatu()
+    } else {
+      const paramComent = {
+        idCidade: cidadeSelecionada,
+        nome: usuario.usuario,
+        comentario: comment,
+      }
+      try {
+        await requests.postComentario(paramComent)
+        alert("Comentário enviado!")
+        getResponses()
+        setCidadeSelecionada('')
+        setComment('')
+      } catch (err) {
+        if (err.response.data) alert(err.response.data.error)
+        else alert(err.message)
+      }
     }
   }
 
@@ -159,7 +160,6 @@ function App() {
     const body = {
       "idUsuario": usuario.idUsuario
     }
-    console.log('body :>> ', body);
     try {
       await requests.deleteComentario(body, idComentario)
       getResponses()
@@ -170,8 +170,17 @@ function App() {
     }
   }
 
+  function aparecerTatu() {
+    document.getElementById('tatu').style.display = 'block'
+
+    setTimeout(() => {
+      document.getElementById('tatu').style.display = 'none'
+    }, 17000);
+  }
+
   return (
     <>
+      <img src={tatu} id="tatu" />
       <audio
         ref={myRef}
         src={sound}
@@ -193,7 +202,7 @@ function App() {
           {texto}
         </div>
       </div>
-      <div className='MainContainer'>
+      <div className='MainContainer' >
 
         <div className='stop' onClick={pararcontinuar}>
           {textobot}
