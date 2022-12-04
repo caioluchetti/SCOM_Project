@@ -15,13 +15,11 @@ function App() {
   const [comment, setComment] = useState('');
   const [cidadeSelecionada, setCidadeSelecionada] = useState('');
   const [cidades, setCidades] = useState();
-  const [nome, setNome] = useState('');
   const [comentarios, setComentarios] = useState([]);
   const [usuario, setUsuario] = useState({})
 
 
   useEffect(() => {
-
     setStart(localStorage.getItem("condicao"))
     if (start == "sim") {
       setTexto("Loading...")
@@ -127,7 +125,7 @@ function App() {
     console.log(cidadeSelecionada)
     const paramComent = {
       idCidade: cidadeSelecionada,
-      nome: nome,
+      nome: usuario.usuario,
       comentario: comment,
     }
     console.log(paramComent)
@@ -137,7 +135,6 @@ function App() {
       getResponses()
       setCidadeSelecionada('')
       setComment('')
-      setNome('')
     } catch (err) {
       if (err.response.data) alert(err.response.data.error)
       else alert(err.message)
@@ -145,10 +142,22 @@ function App() {
   }
 
 
+  useEffect(() => {
 
+    const usuario = localStorage.getItem('usuario')
+    if (usuario)
+      setUsuario(JSON.parse(usuario))
+
+  }, []);
+
+  function logout() {
+    localStorage.setItem('usuario', '')
+    window.location.reload()
+  }
 
   return (
     <>
+      {console.log('usuario :>> ', usuario)}
       <audio
         ref={myRef}
         src={sound}
@@ -175,11 +184,21 @@ function App() {
         <div className='stop' onClick={pararcontinuar}>
           {textobot}
         </div>
-        <div className='login' onClick={Loginnav}>
-          <div className='login-content' onClick={Loginnav}>
-            Faça seu Login/Cadastro!
+        {usuario?.idUsuario ?
+          <div className='already-logged' onClick={() => logout()}>
+            <div className='already-logged-content' onClick={() => logout()}>
+              Seja bem-vindo {usuario.usuario} <br></br>
+              Clique para deslogar
+            </div>
           </div>
-        </div>
+          :
+          <div className='login' onClick={Loginnav}>
+            <div className='login-content' onClick={Loginnav}>
+              Faça seu Login/Cadastro!
+            </div>
+          </div>
+        }
+
         <div className='box'>
           <div className='Title3'>
             Mapa de Skyrim
@@ -268,14 +287,11 @@ function App() {
             <YouTube videoId="JSRtYpNRoN0" />
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
-          {usuario ? <div className='Title4'>Confeccione um Comentário, Artesão!</div> : null}
+          {usuario?.idUsuario ? <div className='Title4'>Confeccione um Comentário, Artesão!</div> : null}
           <div className='caixao'>
-            {usuario ?
+            {usuario?.idUsuario ?
               <div className='caixa'>
                 <div className='caixinha'>
-                  <div className='nome'>
-                    <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)} value={nome}></input>
-                  </div>
                   <div className='comentario'>
                     <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)} value={comment}></input>
                   </div>
