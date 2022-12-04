@@ -35,7 +35,6 @@ const requests = {
         if (comentario) return comentario.data
     },
     postCadastro: async function postCadastro(body) {
-        console.log('foi')
         const cadastro = await axios.post('/usuario/cadastro', body)
         if (cadastro) return cadastro.data
     },
