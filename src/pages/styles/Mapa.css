@@ -871,11 +871,6 @@ select {
     cursor: pointer;
 }
 
-.login:hover {
-
-
-}
-
 .login:hover .login-content {
     margin-top: 50%;
     width: 10vw;

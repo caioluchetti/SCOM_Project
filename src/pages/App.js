@@ -150,14 +150,28 @@ function App() {
 
   }, []);
 
-  function logout() {
-    localStorage.setItem('usuario', '')
+  async function logout() {
+    await localStorage.setItem('usuario', '')
     window.location.reload()
+  }
+
+  async function moderar(idComentario) {
+    const body = {
+      "idUsuario": usuario.idUsuario
+    }
+    console.log('body :>> ', body);
+    try {
+      await requests.deleteComentario(body, idComentario)
+      getResponses()
+    }
+    catch (err) {
+      if (err.response.data) alert(err.response.data.error)
+      else alert(err.message)
+    }
   }
 
   return (
     <>
-      {console.log('usuario :>> ', usuario)}
       <audio
         ref={myRef}
         src={sound}
@@ -318,8 +332,15 @@ function App() {
               {comentarios?.map(comentario => {
                 return (
                   <div className='commentInd'>
-                    <div className='Nome1'>{comentario.nome}</div>
-                    <div className='Cidade1'><b>Cidade favorita:</b>{comentario.cidade.nome}</div>
+                    {usuario?.isAdmin ?
+                      <div style={{ display: "flex", width: "100%", justifyContent: "space-between" }}>
+                        <div className='Nome1'>{comentario.nome}</div>
+                        <label className='Nome1' style={{ cursor: "pointer" }} onClick={() => moderar(comentario.idComentario)}>X</label>
+                      </div>
+                      :
+                      <div className='Nome1'>{comentario.nome}</div>
+                    }
+                    <div className='Cidade1'><b>Cidade favorita: </b>{comentario.cidade.nome}</div>
                     <div className='Comment1'>{comentario.comentario}</div>
 
                   </div>

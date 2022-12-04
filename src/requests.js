@@ -47,6 +47,10 @@ const requests = {
         const esqueciSenha = await axios.post('/usuario/esquecisenha', body)
         if (esqueciSenha) return esqueciSenha.data
     },
+    deleteComentario: async function postComentario(body, idComentario) {
+        const comentario = await axios.delete(`/comentario/${idComentario}`, {data: body })
+        if (comentario) return comentario.data
+    },
 }
 
 export default requests
