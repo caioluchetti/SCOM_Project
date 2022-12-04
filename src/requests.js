@@ -1,7 +1,7 @@
 import Axios from 'axios'
 
 const axios = Axios.create({
-    baseURL: 'https://scom-project-back.herokuapp.com',
+    baseURL: 'https://scom-project-back.onrender.com',
     timeout: 10000,
 });
 
@@ -33,6 +33,19 @@ const requests = {
     postComentario: async function postComentario(body) {
         const comentario = await axios.post('/comentario', body)
         if (comentario) return comentario.data
+    },
+    postCadastro: async function postCadastro(body) {
+        console.log('foi')
+        const cadastro = await axios.post('/usuario/cadastro', body)
+        if (cadastro) return cadastro.data
+    },
+    postLogin: async function postLogin(body) {
+        const login = await axios.post('/usuario/login', body)
+        if (login) return login.data
+    },
+    postEsqueciSenha: async function postEsqueciSenha(body) {
+        const esqueciSenha = await axios.post('/usuario/esquecisenha', body)
+        if (esqueciSenha) return esqueciSenha.data
     },
 }
 

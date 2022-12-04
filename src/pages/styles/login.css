@@ -9,11 +9,20 @@
     position: absolute;
 }
 
-.formulario{
+.formulario {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 60px;
+}
+
+.novaConta {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }
 
 .titulo {
@@ -24,20 +33,23 @@
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
-
     color: black;
+    display: flex;
 }
 
 .email {
     margin-top: 100px;
     margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
 }
+
 .email label {
     position: absolute;
     margin-left: 10px;
     font-size: 20px;
     color: black;
-    
+
 }
 
 
@@ -82,12 +94,13 @@
 .password {
     margin-bottom: 68px;
 }
+
 .password label {
     position: absolute;
     margin-left: 10px;
     font-size: 20px;
     color: black;
-    
+
 }
 
 .password input {
@@ -157,7 +170,7 @@
 
 }
 
-.voltar{
+.voltar {
     position: absolute;
     font-family: 'Skyrim';
     height: 5vh;
@@ -170,7 +183,38 @@
     transition: all 500ms ease;
     border-radius: 10%;
 }
-.voltar:hover{
+
+.voltar:hover {
     height: 5.5vh;
     width: 8.8vw;
 }
+
+.modal{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal .box{
+    background-color: #c5c3c3;
+    padding: 40px;
+    border-radius: 10px;
+    border: 2px solid ;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }

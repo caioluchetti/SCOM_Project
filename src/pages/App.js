@@ -17,6 +17,7 @@ function App() {
   const [cidades, setCidades] = useState();
   const [nome, setNome] = useState('');
   const [comentarios, setComentarios] = useState([]);
+  const [usuario, setUsuario] = useState({})
 
 
   useEffect(() => {
@@ -267,33 +268,36 @@ function App() {
             <YouTube videoId="JSRtYpNRoN0" />
           </div>
           <div className='Title2' onClick={Beastiarynav}>Conheça o Bestiário!</div>
-          <div className='Title4'>Confeccione um Comentário, Artesão!</div>
+          {usuario ? <div className='Title4'>Confeccione um Comentário, Artesão!</div> : null}
           <div className='caixao'>
-            <div className='caixa'>
-              <div className='caixinha'>
-              <div className='nome'>
-                <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)} value={nome}></input>
-              </div>
-              <div className='comentario'>
-                <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)} value={comment}></input>
-              </div>
-              </div>
-              
-              <select onChange={(el) => setCidadeSelecionada(el.target.value)} value={cidadeSelecionada}>
-                <option value='' disabled>Selecione sua Cidade Preferida</option>
-                {cidades?.map(cidade => {
+            {usuario ?
+              <div className='caixa'>
+                <div className='caixinha'>
+                  <div className='nome'>
+                    <input type='nome' placeholder='Seu nome:' onChange={(event) => setNome(event.target.value)} value={nome}></input>
+                  </div>
+                  <div className='comentario'>
+                    <input type='comentario' placeholder='Mande seu comentário!' onChange={(event) => setComment(event.target.value)} value={comment}></input>
+                  </div>
+                </div>
 
-                  return (
-                    <option key={cidade.idCidade} value={cidade.idCidade}>{cidade.nome}</option>
-                  )
-                })}
-              </select>
+                <select onChange={(el) => setCidadeSelecionada(el.target.value)} value={cidadeSelecionada}>
+                  <option value='' disabled>Selecione sua Cidade Preferida</option>
+                  {cidades?.map(cidade => {
+
+                    return (
+                      <option key={cidade.idCidade} value={cidade.idCidade}>{cidade.nome}</option>
+                    )
+                  })}
+                </select>
 
 
-              <div className='button' >
-                <button type='button' onClick={postComentario1}>ENVIAR</button>
+                <div className='button' >
+                  <button type='button' onClick={postComentario1}>ENVIAR</button>
+                </div>
               </div>
-            </div>
+              : null}
+
             <div className='comentarios'>
               {comentarios?.map(comentario => {
                 return (
