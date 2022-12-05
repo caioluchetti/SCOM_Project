@@ -59,7 +59,8 @@ export default function MiniGalinha() {
             <div id="fim">
                 <p>Você matou a galinha</p>
                 <p>Você será preso imediatamente!</p>
-                <p><img className="fritinho" src={frito} height="60vh"></img></p>
+                <p>Recompensa pela sua cabeça: {(fase*1000).toFixed(0)} moedas de ouro</p>
+                <p><img className="fritinho" src={frito} style={{height:"15vh"}}></img></p>
                 <button className="botaozinho" onClick={reset}>RESET</button>
             </div>
 
