@@ -34,7 +34,7 @@ export default function MiniGalinha() {
 
     return (
 
-        <div className="body">
+        <div className="body" id="mouse-espada">
             <div className="voltar" onClick={navMenu}>
                 Voltar ao Menu
             </div>
