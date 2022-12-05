@@ -7,6 +7,7 @@ import Criatura from './pages/Criatura'
 import Cidade from './pages/Cidade'
 import Login from './pages/Login'
 import Cadastro from './pages/Cadastro'
+import MiniGalinha from './pages/MiniGalinha';
 
 function Rotas() {
     return (
@@ -18,6 +19,7 @@ function Rotas() {
                 <Route path="/cidade" element={<Cidade />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/galinha" element={<MiniGalinha />}/>
 
             </Routes>
 

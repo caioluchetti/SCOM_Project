@@ -10,6 +10,7 @@ import sound3 from '../audio/in2.mp3'
 import sound4 from '../audio/out2.mp3'
 import requests from '../requests';
 import tatu from '../images/tatu.gif'
+import galinha from '../images/chicken.gif'
 
 function App() {
 
@@ -101,6 +102,9 @@ function App() {
   }
   const Loginnav = () => {
     navigate(`/login`)
+  }
+  const miniGalinha = () => {
+    navigate(`/galinha`)
   }
   async function getResponses() {
     try {
@@ -357,7 +361,12 @@ function App() {
               })}
             </div>
           </div>
-
+          <div className='textgalinha'>
+              NÃO MATE A GALINHA!
+          </div>
+          <div className='galinha' onClick={miniGalinha}>
+            <img src={galinha} width={'60%'} height={'60%'} id="galinha" />
+          </div>
         </div>
       </div>
 

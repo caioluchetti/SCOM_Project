@@ -1,0 +1,49 @@
+#container {
+    position: relative;
+}
+.botaozinho{
+    width: 10vw;
+    height: 10vh;
+    font-family: 'Skyrim';
+    background-image: url("../../images/oldpaper.png");
+    border-radius: 10%;
+    transition: all 1.5s ease;
+}
+.botaozinho:hover{
+    background-image: url("../../images/oldpaperstate2.png");
+
+}
+#fim{
+    display: none;
+    color: white;
+    margin-top: 12%;
+    text-align: center;
+    font-family: 'Skyrim';
+    font-size: 7vw;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+#ball {
+    height: 50%;
+    width: 50%;
+    display: block;
+    position: absolute;
+    left: 0;
+    animation: animate 4s linear 0s infinite alternate;
+}
+@keyframes animate {
+    from { left: 70%; }
+    to { left: 0; }
+    from {top: 20%;}
+    to {top:60%;}
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
+    }
+
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+    }
+}
