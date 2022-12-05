@@ -37,11 +37,12 @@
 }
 
 @keyframes animate {
-    from { left: 70%; }
-    to { left: 0 }
+    from { left: 80%; }
+    to { left: 0% }
     from {top: 20%; }
-    to {top:60%; }
+    to {top:50%; }
 }
+
 @keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;

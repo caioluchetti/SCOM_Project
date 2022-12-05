@@ -19,14 +19,17 @@ export default function MiniGalinha() {
 
 
     const [vivo, setVivo] = useState(true);
+    const [fase, setFase] = useState(1)
 
-        if (vivo == false) {
-            document.getElementById("ball").style.display = "none";
-            document.getElementById("fim").style.display = "block";
-        }
-    
-    function reset(){
+    if (vivo == false) {
+        document.getElementById("ball").style.display = "none";
+        document.getElementById("fim").style.display = "block";
+    }
+
+    function reset() {
         setVivo(true);
+        setFase(fase + 1)
+        document.getElementById("ball").style.animationDuration = (4 / (fase * 0.8)).toString() + 's';
         document.getElementById("ball").style.display = "block";
         document.getElementById("fim").style.display = "none";
     }
@@ -37,6 +40,11 @@ export default function MiniGalinha() {
         <div className="body" id="mouse-espada">
             <div className="voltar" onClick={navMenu}>
                 Voltar ao Menu
+            </div>
+            <div style={{ display: "flex", width: "100%", alignItems: 'center', justifyContent: "center" }}>
+                <h1 style={{color:'white'}}>
+                    Fase {fase}
+                </h1>
             </div>
             <div id="ball" >
                 <img
