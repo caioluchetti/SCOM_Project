@@ -46,9 +46,17 @@ const requests = {
         const esqueciSenha = await axios.post('/usuario/esquecisenha', body)
         if (esqueciSenha) return esqueciSenha.data
     },
-    deleteComentario: async function postComentario(body, idComentario) {
+    deleteComentario: async function deleteComentario(body, idComentario) {
         const comentario = await axios.delete(`/comentario/${idComentario}`, {data: body })
         if (comentario) return comentario.data
+    },
+    getScore: async function getScore() {
+        const score = await axios.get('/score')
+        if (score) return score.data
+    },
+    postScore: async function postScore(body) {
+        const score = await axios.post('/score', body)
+        if (score) return score.data
     },
 }
 
