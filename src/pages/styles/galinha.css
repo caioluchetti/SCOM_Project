@@ -57,7 +57,7 @@
     cursor: url('../../images/espada.png'), auto;
     user-select: none;
     height: 100vh;
-
+    min-width: 1500px;
 }
 
 #desistir {

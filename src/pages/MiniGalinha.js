@@ -30,7 +30,7 @@ export default function MiniGalinha() {
         document.getElementById("fim").style.display = "block";
         document.getElementById("desistir").style.display = "none";
         document.getElementById("fase").style.display = "none";
-
+        getScore()
     }
 
 
@@ -105,6 +105,7 @@ export default function MiniGalinha() {
 
     return (
         <div className="body" id="mouse-espada">
+            <meta name="viewport" content= "width=device-width, user-scalable=no"></meta>
             <div className="voltar" onClick={navMenu}>
                 Voltar ao Menu
             </div>
