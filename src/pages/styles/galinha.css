@@ -1,19 +1,23 @@
 #container {
     position: relative;
 }
-.botaozinho{
+
+.botaozinho {
     width: 10vw;
     height: 10vh;
     font-family: 'Skyrim';
     background-image: url("../../images/oldpaper.png");
     border-radius: 10%;
     transition: all 1.5s ease;
+    cursor: pointer;
 }
-.botaozinho:hover{
+
+.botaozinho:hover {
     background-image: url("../../images/oldpaperstate2.png");
 
 }
-#fim{
+
+#fim {
     display: none;
     color: white;
     margin-top: 12%;
@@ -24,17 +28,21 @@
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
 }
-#fim2{
+
+#fim2 {
     display: none;
     color: white;
-    margin-top: 12%;
+    margin-top: 5%;
     text-align: center;
     font-family: 'Skyrim';
     font-size: 4vw;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
     -moz-animation: glow 1s ease-in-out infinite alternate;
     animation: glow 1s ease-in-out infinite alternate;
+    width: 100%;
+    justify-content: space-between;
 }
+
 #ball {
     height: 50%;
     width: 50%;
@@ -44,12 +52,15 @@
     animation: animate 4s linear 0s infinite alternate;
     user-select: none;
 }
-#mouse-espada{
-    cursor: url('../../images/espada.png'),auto;
+
+#mouse-espada {
+    cursor: url('../../images/espada.png'), auto;
     user-select: none;
+    height: 100vh;
 
 }
-#desistir{
+
+#desistir {
     margin-top: 2vh;
     display: flex;
     justify-content: center;
@@ -63,24 +74,109 @@
     box-shadow: 0px 0px 1px black;
     transition: all 400ms ease;
 }
-#desistir:hover{
+
+#desistir:hover {
     background-image: url('../../images/oldpaperstate2.png');
     box-shadow: 0px 0px 10px black;
 
 }
 
+.score {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    margin-top: 10px;
+    height: 40vh;
+}
+
+.boxRegister {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.register {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    height: 250px;
+}
+
+.register label {
+    text-align: center;
+    color: #000000;
+    font-family: 'Skyrim';
+    font-size: 3vh;
+
+}
+
+
+.register input {
+    width: 15vw;
+    height: 7vh;
+    box-sizing: border-box;
+    background-image: url("../../images/oldpaperstate2.png");
+    border: 2px solid #aa3131;
+    border-radius: 16px;
+    font-size: 4vh;
+    text-align: center;
+    transition: all 400ms ease;
+    font-family: 'Skyrim';
+    outline: 0;
+    margin-top: 10px;
+}
+
+.register input:focus {
+
+    background: 0, 0, 0, 0 rgb(211, 211, 211);
+
+
+}
+
+.email input:hover {
+    background: 0, 0, 0, 0 rgb(211, 211, 211);
+
+}
+
+.boxGalinha {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15vw;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-around;
+}
+
 @keyframes animate {
-    from { left: 90%; }
-    to { left: 0% }
-    from {top: 20%; }
-    to {top:50%; }
-    
+    from {
+        left: 90%;
+    }
+
+    to {
+        left: 0%
+    }
+
+    from {
+        top: 20%;
+    }
+
+    to {
+        top: 50%;
+    }
+
 }
 
 @keyframes glow {
     from {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000;
-        
+
     }
 
     to {
@@ -88,6 +184,4 @@
     }
 }
 
-@keyframes girar{
-    
-}
+@keyframes girar {}

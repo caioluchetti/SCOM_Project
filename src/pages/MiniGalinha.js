@@ -13,6 +13,10 @@ export default function MiniGalinha() {
 
 
     const [imagem, setImagem] = useState(galinha)
+    const [scores, setScores] = useState([])
+    const [nome, setNome] = useState([])
+    const [wasRegister, setWasRegister] = useState(false)
+
     const navMenu = (name) => {
         navigate('/')
     }
@@ -36,7 +40,7 @@ export default function MiniGalinha() {
         document.getElementById("ball").style.animationDuration = (4 / (fase * 0.8)).toString() + 's';
         document.getElementById("ball").style.display = "block";
         document.getElementById("fim").style.display = "none";
-        document.getElementById("fim2").style.display="none";
+        document.getElementById("fim2").style.display = "none";
         document.getElementById("desistir").style.display = "block";
         document.getElementById("fase").style.display = "block";
 
@@ -48,23 +52,58 @@ export default function MiniGalinha() {
         document.getElementById("ball").style.animationDuration = (4 / (1 * 0.8)).toString() + 's';
         document.getElementById("ball").style.display = "block";
         document.getElementById("fim").style.display = "none";
-        document.getElementById("fim2").style.display="none";
+        document.getElementById("fim2").style.display = "none";
         document.getElementById("desistir").style.display = "block";
         document.getElementById("fase").style.display = "block";
 
     }
 
-    function desistir(){
+    function desistir() {
         document.getElementById("ball").style.display = "none";
-        document.getElementById("fim2").style.display = "block";
+        document.getElementById("fim2").style.display = "flex";
         document.getElementById("desistir").style.display = "none";
         document.getElementById("fase").style.display = "none";
-
+        setWasRegister(false)
 
     }
 
-    return (
+    async function registrar() {
+        const body = {
+            score: fase - 1,
+            nome: nome
+        }
+        if (nome) {
+            try {
+                await requests.postScore(body)
+                if (scores) {
+                    getScore()
+                    setWasRegister(true)
+                }
+            }
+            catch (err) {
+                if (err.response.data) alert(err.response.data.error)
+                else alert(err.message)
+            }
+        } else alert("Digite um nome")
 
+    }
+
+    async function getScore() {
+        try {
+            const scores = await requests.getScore()
+            if (scores) setScores(scores)
+        }
+        catch (err) {
+            if (err.response.data) alert(err.response.data.error)
+            else alert(err.message)
+        }
+    }
+
+    useEffect(() => {
+        getScore()
+    }, []);
+
+    return (
         <div className="body" id="mouse-espada">
             <div className="voltar" onClick={navMenu}>
                 Voltar ao Menu
@@ -97,11 +136,35 @@ export default function MiniGalinha() {
                 <button className="botaozinho" onClick={reset}>PROXIMO NIVEL</button>
             </div>
             <div id="fim2">
-                <p>Você se entregou à guarda</p>
-                <p>Você será preso imediatamente!</p>
-                <p>Galinhas mortas: {fase-1}</p>
-                <p><img className="fritinho" src={frito} style={{ height: "20vh" }}></img></p>
-                <button className="botaozinho" onClick={reset2}>RESET</button>
+                <div className="boxGalinha" >
+                    <p>Você se entregou à guarda</p>
+                    <p>Você será preso imediatamente!</p>
+                    <p>Galinhas mortas: {fase - 1}</p>
+                    <p><img className="fritinho" src={frito} style={{ height: "20vh" }}></img></p>
+                    <button className="botaozinho" onClick={reset2}>RESET</button>
+                </div>
+                <div style={{ marginRight: '3vw' }}>
+                    <label>ScoreBoard</label>
+                    <div className='score'>
+                        {scores?.map((score, index) => {
+                            return (
+                                <div className='commentInd' style={{ width: '300px' }}>
+                                    <div className='Nome1' style={{ fontSize: '22pt' }}>{index + 1} - {score.nome} : {score.score}</div>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    {!wasRegister ?
+                        <div className="boxRegister">
+                            <div className='register'>
+                                <label>Registre sua pontuação</label>
+                                <input type='register' placeholder='Nome' value={nome} onChange={(event) => setNome(event.target.value)}></input>
+                                <button className="botaozinho" onClick={registrar}>REGISTRAR</button>
+                            </div>
+                        </div>
+                        : null}
+                </div>
+
             </div>
         </div>
     )
